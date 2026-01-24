@@ -207,3 +207,70 @@
 
 // console.log(myName.slice(counter)); //"ro"
 
+// [==========================={EPsode[56]}==================]
+// Loop Challenge
+// let myAdmins = ["Ahmed", "Osama", "Sayed", "Stop", "Samera"];
+// let myEmployees = [
+//   "Amgad",
+//   "Samah",
+//   "Ameer",
+//   "Omar",
+//   "Othman",
+//   "Amany",
+//   "Samia", // تم تغيير Samai إلى Samia لتطابق الصورة
+//   "Anwar",
+// ];
+
+// let countAdmin = 0;
+
+// // تحديد عدد المدراء (حتى كلمة Stop)
+// for (let i = 0; i < myAdmins.length; i++) {
+//   if (myAdmins[i] === "Stop") break;
+//   countAdmin++;
+// }
+
+// // طباعة العدد
+// document.write(`<div>We Have ${countAdmin} Admins</div><hr>`);
+
+// // إنشاء مصفوفات للموظفين حسب الحرف الأول مع الحفاظ على الترتيب
+// let startNamA = [];
+// let startNamO = [];
+// let startNamS = [];
+
+// for (let i = 0; i < myEmployees.length; i++) {
+//   if (myEmployees[i].startsWith("A")) {
+//     if (!startNamA.includes(myEmployees[i])) startNamA.push(myEmployees[i]);
+//   } else if (myEmployees[i].startsWith("O")) {
+//     if (!startNamO.includes(myEmployees[i])) startNamO.push(myEmployees[i]);
+//   } else if (myEmployees[i].startsWith("S")) {
+//     if (!startNamS.includes(myEmployees[i])) startNamS.push(myEmployees[i]);
+//   }
+// }
+
+// // عرض كل فريق مع أعضائه
+// for (let i = 0; i < countAdmin; i++) {
+//   document.write(`<p>The Admin For Team ${i + 1} Is ${myAdmins[i]}</p>`);
+//   document.write(`<h3>Team Members:</h3>`);
+  
+//   let teamMembers = [];
+//   let n = 0;
+  
+//   // تحديد عدد الأعضاء لكل فريق حسب الترتيب في الصورة
+//   if (i === 0) n = 3; // الفريق الأول: 3 أعضاء
+//   else n = 2; // الفريق الثاني والثالث: 2 أعضاء
+  
+//   if (myAdmins[i].startsWith("A")) {
+//     teamMembers = startNamA.slice(0, n);
+//   } else if (myAdmins[i].startsWith("O")) {
+//     teamMembers = startNamO.slice(0, n);
+//   } else if (myAdmins[i].startsWith("S")) {
+//     teamMembers = startNamS.slice(0, n);
+//   }
+  
+//   // عرض أعضاء الفريق
+//   teamMembers.forEach((member, index) => {
+//     document.write(`- ${index + 1} ${member}<br>`);
+//   });
+  
+//   document.write(`<hr>`);
+// }

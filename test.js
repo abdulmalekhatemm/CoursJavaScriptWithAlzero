@@ -788,10 +788,266 @@ SubString : substring(Start [Required],End [Optional])
 //   }
 // }
 // [==========================={EPsode[52]}==================]
-let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
+// let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
 
-let i = 0 ; 
-for(;i < products.length ; ){
-    i++;
-    console.log(products[i])
-}
+// let i = 0 ; 
+// for(; ; ){
+   
+//     console.log(products[i]);
+//      i += 2;//  i++;
+//      if (i === products.length) break;
+// }
+
+
+// [==========================={EPsode[53]}==================]
+// let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
+// let  colors = ["Red", "Green","Black"];
+// let showCount = 2;
+
+// document.write(`Show ${showCount} Products`);
+
+// for(let i = 0; i< showCount ; i++){
+//       document.write(`<div>`);
+//       document.write(`<h3>[${i+1}] ${products[i]}</h3>`);
+//       for(let j = 0 ; j < colors.length;j++){
+//         document.write(`<p> ${colors[i]} </p>`);
+//       }
+//        document.write(`<p> ${colors.join(" | ")} </p>`);
+//       document.write(`</div>`);
+// }
+// // [==========================={EPsode[54]}==================]
+// let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
+
+// let index = 0;
+// while (index < products.length) {
+//   console.log(products[index]);
+//   index++;
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+// [==========================={EPsode[55]}==================]
+// let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
+// let index = 0;
+// // while(false){
+// //     console.log(products[index]);
+// //     index++;
+// // }
+// do{
+//     console.log(products[index]);
+//     index++;
+// }while(false);
+// console.log(index);
+// [==========================={EPsode[56]}==================]
+// Loop Challenge
+// let myAdmins = ["Ahmed", "Osama", "Sayed", "Stop", "Samera"];
+// let myEmployees = [
+//   "Amgad",
+//   "Samah",
+//   "Ameer",
+//   "Omar",
+//   "Othman",
+//   "Amany",
+//   "Samia", // تم تغيير Samai إلى Samia لتطابق الصورة
+//   "Anwar",
+// ];
+
+// let countAdmin = 0;
+
+// // تحديد عدد المدراء (حتى كلمة Stop)
+// for (let i = 0; i < myAdmins.length; i++) {
+//   if (myAdmins[i] === "Stop") break;
+//   countAdmin++;
+// }
+
+// // طباعة العدد
+// document.write(`<div>We Have ${countAdmin} Admins</div><hr>`);
+
+// // إنشاء مصفوفات للموظفين حسب الحرف الأول مع الحفاظ على الترتيب
+// let startNamA = [];
+// let startNamO = [];
+// let startNamS = [];
+
+// for (let i = 0; i < myEmployees.length; i++) {
+//   if (myEmployees[i].startsWith("A")) {
+//     if (!startNamA.includes(myEmployees[i])) startNamA.push(myEmployees[i]);
+//   } else if (myEmployees[i].startsWith("O")) {
+//     if (!startNamO.includes(myEmployees[i])) startNamO.push(myEmployees[i]);
+//   } else if (myEmployees[i].startsWith("S")) {
+//     if (!startNamS.includes(myEmployees[i])) startNamS.push(myEmployees[i]);
+//   }
+// }
+
+// // عرض كل فريق مع أعضائه
+// for (let i = 0; i < countAdmin; i++) {
+//   document.write(`<p>The Admin For Team ${i + 1} Is ${myAdmins[i]}</p>`);
+//   document.write(`<h3>Team Members:</h3>`);
+  
+//   let teamMembers = [];
+//   let n = 0;
+  
+//   // تحديد عدد الأعضاء لكل فريق حسب الترتيب في الصورة
+//   if (i === 0) n = 3; // الفريق الأول: 3 أعضاء
+//   else n = 2; // الفريق الثاني والثالث: 2 أعضاء
+  
+//   if (myAdmins[i].startsWith("A")) {
+//     teamMembers = startNamA.slice(0, n);
+//   } else if (myAdmins[i].startsWith("O")) {
+//     teamMembers = startNamO.slice(0, n);
+//   } else if (myAdmins[i].startsWith("S")) {
+//     teamMembers = startNamS.slice(0, n);
+//   }
+  
+//   // عرض أعضاء الفريق
+//   teamMembers.forEach((member, index) => {
+//     document.write(`- ${index + 1} ${member}<br>`);
+//   });
+  
+//   document.write(`<hr>`);
+// }
+
+
+
+// [==========================={EPsode[57-58]}==================]
+
+// function sayHello (userName , age ){
+//   if(age < 20 ){
+//     console.log('App Is Not suitable For You ')
+//   }else{
+//       console.log(`Hello ${userName} Your age Is ${age }`);
+//   }
+// }
+
+
+// sayHello("Oasma" , 40 );
+// sayHello("abboud", 45 );
+// sayHello("qasem",18);
+
+
+// function generateYears(start , end , exclude){
+//     for( let  i = start ; i <= end ;i++){
+//         if( i === exclude){
+//             continue;
+//         }
+//         console.log(i)
+//     }
+// }
+
+// generateYears(2003, 2026 , 2020);
+
+// [==========================={EPsode[60]}==================]
+
+// function sayHello(userName = "Unknown", age = "Unknown"){
+//     // if (age === undefined){
+//     //     age = "Unknown"
+//     // }
+//     // age = age || "age";
+//     return  `Hello ${userName} Your age Is  ${age}`;
+// }
+
+// console.log(sayHello("abboud", 18));
+// [==========================={EPsode[60]}==================]
+
+// function sayHello(userName = "Unknown", age = "Unknown"){
+//     // if (age === undefined){
+//     //     age = "Unknown"
+//     // }
+//     // age = age || "age";
+//     return  `Hello ${userName} Your age Is  ${age}`;
+// }
+
+// console.log(sayHello("abboud", 18));
+
+// [==========================={EPsode[60]}==================]
+
+// function sayHello(userName = "Unknown", age = "Unknown"){
+//     // if (age === undefined){
+//     //     age = "Unknown"
+//     // }
+//     // age = age || "age";
+//     return  `Hello ${userName} Your age Is  ${age}`;
+// }
+
+// console.log(sayHello("abboud", 18));
+// [==========================={EPsode[61]}==================]
+// function calc(...numbers){
+//     // console.log(Array.isArray(numbers));
+//     let results = 0 ;
+//     for(let i = 0 ; i < numbers.length;i++){
+//         results += numbers[i] ; //results = results +  numbers[i] ;
+//         // console.log(numbers[i]);
+//     }
+//     return `Final  Result Is ${results} `;
+   
+// }
+
+// console.log(calc(10 , 20 , 30 , 40 , 50 , 50))
+// [==========================={EPsode[62]}==================]
+// function shwoInfo(us = "Un", ag = "Un", rt = 0, shwo = "Yes", ...sk) {
+//   document.write(`<div>`);
+//   document.write(`<h3>Welcom, ${us} </h3>`);
+//   document.write(`<p>Age: ${ag}   </p>`);
+//   document.write(`<p>Hour Rate: $${rt}   </p>`);
+//   if (shwo === "Yes") {
+//     if (sk.length > 0) {
+//       document.write(`<p>Skills:
+//     ${sk.join(" | ")}   </p>`);
+//     } else {
+//       document.write(`<p>Skills: No Skills    </p>`);
+//     }
+//   } else {
+//    document.write(`Skills IS Hidden`);
+//   }
+//   document.write(`</div>`);
+// }
+
+// shwoInfo("Oasma", 38, 30, "no" ,"Html","CSS","JavaScript","Node.js","Express.js","React.js","Monogdb");
+// [==========================={EPsode[63]}==================]
+// --Create Function showDetails
+// --Function Accept 3 Parameters [a , b , c]
+// --Data Types For Info Is
+// --String => Name
+// --Number => Age
+// --Boolean => Status
+// Argument Is Random
+// Data Is Not Sorted Output Depend On Data Types
+// --Use Ternary Conditional Operator
+// showDetails("Oasma", 38, true); //Hello Osama,Year Age Is 38 , You Are Available For Hire
+// showDetails(38, "Oasma", true); //Hello Osama,Year Age Is 38 , You Are Available For Hire
+// showDetails(true, 38, "Oasma"); //Hello Osama,Year Age Is 38 , You Are Available For Hire
+// showDetails(false, "Oasma", 38); //Hello Osama,Year Age Is 38 , You Are Not Available For Hire
+// [==========================={EPsode[64]}==================]
+// function showDetails(Name, age, status) {
+//   let nm = String(Name),
+//     ag = Number(age),
+//     st = Boolean(status);
+//     console.log(nm , ag , st)
+//   nm===Name && ag===age && st === true
+//     ? document.write(`Hello ${Name}, Your Age Is ${age},You Are Available For Hire<br>`)
+//     : document.write(`Hello ${Name}, Your Age Is ${age},You Are Not Available For Hire<br>`)
+//      ag===age && nm===Name && st === true
+//      ? document.write(`Hello ${Name}, Your Age Is ${age},You Are Available For Hire<br>`) 
+//      : document.write(`Hello ${Name}, Your Age Is ${age},You Are Not Available For Hire<br>`)
+//    st === true && ag===age && nm === Name
+//    ? document.write(`Hello ${Name}, Your Age Is ${age},You Are Available For Hire<br>`) 
+//    :document.write(`Hello ${Name}, Your Age Is ${age},You Are Not Available For Hire<br>`)
+//     st === false &&  nm === Name && ag===age 
+//    ? document.write(`Hello ${Name}, Your Age Is ${age},You Are Available For Hire<br>`) 
+//    :document.write(`Hello ${Name}, Your Age Is ${age},You Are Not Available For Hire<br>`)
+  
+  
+// }
+// showDetails("Oasma", 38, true).sort().reverse();
+// showDetails(38, "Oasma", true).sort().reverse();
+// showDetails(true, 38, "Oasma");
+// showDetails(false, "Oasma", 38);
+
