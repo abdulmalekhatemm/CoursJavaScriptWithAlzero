@@ -589,40 +589,288 @@
 // console.log(user.myVar); //user.country
 // console.log(user[myVar  ]); //user.country
 // [==========================={EPsode[81]}==================]
-let available = true;
-let user = {
-  name: "abboud",
-  age: 38,
-  skills: ["HTML", "CSS", "JS"],
-  available: false,
-  addresses: {
-    ksa: "Riyadh",
-    egypt: {
-      one: "Cair",
-      two: "Giza",
-    },
-  },
-  checkAv: function () {
-    if (this.available === true) {
-      return `The Personal Is available
-`;
-    } else {
-      return `The Persona Is Not available
-`;
-    }
-  },
-};
+// let available = true;
+// let user = {
+//   name: "abboud",
+//   age: 38,
+//   skills: ["HTML", "CSS", "JS"],
+//   available: false,
+//   addresses: {
+//     ksa: "Riyadh",
+//     egypt: {
+//       one: "Cair",
+//       two: "Giza",
+//     },
+//   },
+//   checkAv: function () {
+//     if (this.available === true) {
+//       return `The Personal Is available
+// `;
+//     } else {
+//       return `The Persona Is Not available
+// `;
+//     }
+//   },
+// };
 
-console.log(user.name);
-console.log(user.age);
-console.log(user.skills);
-console.log(user.skills.join(" | "));
-console.log(user.skills[2]);
-console.log(user.addresses);
-console.log(user.addresses.ksa);
-console.log(user.addresses.egypt);
-console.log(user.addresses.egypt.two);
-console.log(user["addresses"].egypt.two);
-console.log(user["addresses"]["egypt"].two);
-console.log(user["addresses"]["egypt"]["one"]);
-console.log(user.checkAv());
+// console.log(user.name);
+// console.log(user.age);
+// console.log(user.skills);
+// console.log(user.skills.join(" | "));
+// console.log(user.skills[2]);
+// console.log(user.addresses);
+// console.log(user.addresses.ksa);
+// console.log(user.addresses.egypt);
+// console.log(user.addresses.egypt.two);
+// console.log(user["addresses"].egypt.two);
+// console.log(user["addresses"]["egypt"].two);
+// console.log(user["addresses"]["egypt"]["one"]);
+// console.log(user.checkAv());
+// [==========================={EPsode[82]}==================]
+// Object
+// Create With New Keyword new object();
+
+// let user = new Object({
+//   age: 20
+// });
+
+// console.log(user);
+
+// user.age = 38 ;
+// user["country"] = "Yemen";
+
+// user.sayHello = function (){
+//   return `Hello`
+// }
+
+// console.log(user);
+// console.log(user.age);
+// console.log(user.country);
+
+// console.log(user.sayHello());
+// [==========================={EPsode[83]}==================]
+
+// let user = new Object({
+//   age: 24 ,
+//   ageInDays: function () {
+//     console.log(this )
+//     return this .age * 365;
+//   }
+// });
+
+// console.log(user.age);
+// console.log(user.ageInDays())
+
+// console.log(this);
+// console.log(this === window);
+
+// myVar = 100;
+
+// console.log(window.myVar);
+
+// console.log(this.myVar);
+
+// function sayHello(){
+//   console.log(this);
+// }
+
+// sayHello();
+
+// console.log(sayHello() === window())
+
+// document.getElementById("cl").onclick = function () {
+//   console.log(this);
+// };
+
+// [==========================={EPsode[84]}==================]
+// let user ={
+//   age: 20 ,
+//   doubleAge: function () {
+//     // console.log(this )
+//     return this.age * 2 ;
+//   }
+// }
+// console.log(user);
+// console.log(user.age);
+// console.log(user.doubleAge())
+// console.log(this);
+// let obj = Object.create({});
+
+// obj.a = 100 ;
+
+// console.log(obj);
+
+// let copyObj  = Object.create(user);
+
+// copyObj.age = 50;
+
+// console.log(copyObj);
+// console.log(copyObj.age);
+// console.log(copyObj.doubleAge());
+
+// [==========================={EPsode[85]}==================]
+// let obj1 = {
+//   prop1: 1,
+//   meth1: function () {
+//     return this.prop1;
+//   },
+// };
+
+// let obj2 = {
+//   prop2: 1,
+//   meth2: function () {
+//     return this.prop2;
+//   },
+// };
+
+// let targetObject = {
+//   prop1: 100  ,
+//   prop3: 3,
+// };
+
+// let finalObject = Object.assign(targetObject , obj1 , obj2);
+// finalObject.prop1 = 200 ;
+// finalObject.prop2 = 4 ;
+// console.log(finalObject);
+
+// let newObject = Object.assign({},obj1 ,{prop5: 5 , prop6: 6});
+
+// console.loj(newObject);
+// [==========================={EPsode[86]}==================]
+// let myIdElement  = document.getElementById("my-div");
+// let myTagElements = document.getElementsByTagName("p");
+// let myClassElements = document.getElementsByClassName("my-span");
+// let myQueryElements = document.querySelector("#my-div");
+// let myQueryAllElements = document.querySelectorAll(".my-span");
+
+// console.log(myIdElement);
+// console.log(myTagElements[1]);
+// console.log(myClassElements);
+// console.log(myQueryElements);
+// console.log(myQueryAllElements[1]);
+
+// console.log(document.title);
+// console.log(document.body);
+// console.log(document.forms[0].one.value);
+// console.log(document.links[1].href);
+// [==========================={EPsode[87]}==================]
+// let myElement = document.querySelector(".js");
+
+// console.log(myElement.innerHTML);
+// console.log(myElement.textContent);
+
+// myElement.innerHTML = "Text From <span>Main.js</span> File";
+// myElement.textContent = "Text From <span>Main.js</span> File";
+
+// document.images[0].src = "https://google.com";
+// document.images[0].alt = "no images";
+// document.images[0].title = "picture";
+// document.images[0].id = "picture";
+// document.images[0].className = "img  ";
+
+// let myLink = document.querySelector(".link");
+// console.log(myLink.getAttribute("class"));
+// console.log(myLink.getAttribute("href"));
+// myLink.setAttribute("href","https://twitter.com");
+// myLink.setAttribute("title","Twitter");
+
+// [==========================={EPsode[88]}==================]
+
+// console.log(document.getElementsByTagName("p"[0].attributes))
+// let myP = document.getElementsByTagName("p")[0];
+
+// if(myP.hasAttribute("data-src")){
+//   if(myP.getAttribute("data-src") === ""){
+//     myP.removeAttribute("data-src");
+//   }
+//   else
+//   {
+//     myP.setAttribute("data-src", "New Value");
+//   }
+//   // myP.removeAttribute("data-src");
+// }else
+// {
+//   console.log(`Not Found`);
+// }
+
+// if(myP.hasAttributes()){
+//   console.log(`Has Attributes `);
+// }
+
+// if(document.getElementsByTagName("div")[0].hasAttributes()){
+//   console.log(`Has Attributes    non`);
+// }else
+// {
+//   console.log(`Div Attribues Has Not Attributes `);
+// }
+
+// [==========================={EPsode[89]}==================]
+
+// let myElement = document.createElement("div");
+// let myAttr =  document.createAttribute("data-custom");
+// let myText  = document.createTextNode("Product One");
+// let myComment = document.createComment("This Is Div");
+// myElement.className = "product";
+// myElement.setAttributeNode(myAttr);
+// myElement.setAttribute("data-test","Testing");
+// // ِAppend Text To Element
+// myElement.appendChild(myText);
+
+// // Apppend Comment To Element
+// myElement.appendChild(myComment);
+
+// // Append Element To Body
+// document.body.appendChild(myElement);
+// console.log(myElement);
+
+// [==========================={EPsode[90]}==================]
+
+// for(let i = 0 ; i < 100;i++){
+//     let myMainElement = document.createElement("div");
+// let myHeading = document.createElement("H3");
+// let myParagraph = document.createElement("p");
+
+// let myHeadingText = document.createTextNode(`Product Title ${i+1}`);
+// let myParagraphText = document.createTextNode(`Product Description ${i+1}`);
+
+// // Add Heading Text
+// myHeading.appendChild(myHeadingText);
+
+// // Add Heading To Main Element
+
+// myMainElement.appendChild(myHeading);
+
+// // Add Paragraph
+
+// myMainElement.appendChild(myParagraphText);
+
+// myMainElement.appendChild(myParagraph);
+
+// myMainElement.className = "producto";
+
+// // append child to
+// document.body.appendChild(myMainElement);
+// }
+// [==========================={EPsode[91]}==================]
+// let myElement = document.querySelector("div");
+
+// console.log(myElement);
+
+// console.log(myElement.children);
+// console.log(myElement.children[0]);
+// console.log(myElement.childNodes);
+// console.log(myElement.childNodes[0]);
+// console.log(myElement.firstChild);
+// console.log(myElement.lastChild);
+// console.log(myElement.firstElementChild);
+// console.log(myElement.lastElementChild);
+// [==========================={EPsode[92]}==================]
+// let myBtn = document.getElementById("btn");
+
+// myBtn.onmousedown = function () {
+//   console.log("clicked");
+// };
+
+// window.onresize = function () {
+//   console.log("scroll");
+// };

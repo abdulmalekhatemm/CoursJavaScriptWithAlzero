@@ -1051,3 +1051,650 @@ SubString : substring(Start [Required],End [Optional])
 // showDetails(true, 38, "Oasma");
 // showDetails(false, "Oasma", 38);
 
+// [==========================={EPsode[65]}==================]
+// // Function
+// --Function Inside Function
+// --Return Function
+//Exmaple 1
+// function sayMessage(fName , lName ){
+//     let message = `Hello`;
+//     //Nested Function
+//     function concateMsge(){
+//         message = `${message} ${fName} ${lName}`;
+//     }
+//     concateMsge();
+//     return message;
+// }
+
+// console.log(sayMessage("abboud", "qasem"));
+//Exmaple 2
+// function sayMessage(fName , lName ){
+//     let message = `Hello`;
+//     //Nested Function
+//     function concateMsge(){
+//     return `${message} ${fName} ${lName}`;
+//     }
+
+//     return   concateMsge();
+// }
+
+// console.log(sayMessage("abboud", "qasem"));
+// Exmaple 3
+// function sayMessage(fName , lName ){
+//     let message = `Hello`;
+//     //Nested Function
+//     function concateMsge(){
+//         function getFullName(){
+//             return `${fName} ${lName}`;
+//         }
+//     return `${message} ${getFullName()} `;
+//     }
+
+//     return   concateMsge();
+// }
+
+// console.log(sayMessage("abboud", "qasem"));
+// [==========================={EPsode[66]}==================]
+// let print = function print (){
+//     return 10 ;
+// }
+// console.log(print());
+
+// print ()
+
+// let print = _ => { في حالة متقدم هذه تعتبر arraow fun
+//     return 10;
+// }
+
+// console.log(print())
+
+// let print = num => num;
+
+// let print =( num1 , num2 )=> num1 +num2 ;
+// console.log(print(200,50));
+// [==========================={EPsode[67]}==================]
+// var a = 10 ;
+// let b = 20 ;
+
+// function showText () {
+//     var a = 15 ;
+// let b = 25 ;
+// console.log(`Function - From Local ${a}`);
+// console.log(`Function - From Local ${b}`);
+
+// }
+// console.log(`From Golbal ${a}`);
+// console.log(`From Global ${b}`);
+
+// showText();
+
+// var x = 10
+
+// if(10 === 10){
+// //   let  x = 50 ;
+//   console.log(`From If Block ${x}`);
+// }
+
+// console.log(`From Gloable ${x}`);
+
+// [==========================={EPsode[69]}==================]
+// let a = 20;
+// function parent() {
+//   let a = 10;
+//   function child() {
+//     console.log(a);
+//     console.log(`From Child ${b}`);
+
+//     function grand() {
+//       let b = 100;
+//       console.log(`From Grand ${a}`);
+//       console.log(`From Grand ${b}`);
+//     }
+//     grand();
+//   }
+//   child();
+// }
+// parent();
+// [==========================={EPsode[70]}==================]
+// Function Arrow Challenges
+
+//[1] One Statement In Function
+// [2] Convert To Arrow Function
+// [3] Print The Output [Arguments May Change]
+
+// let names = function(...args){
+//     // Parameter ?
+//     return args.map(name =>` [${name}]`).join(",") + "=> Done !";
+// }
+// console.log("// String", names("Osama","Mohamed","Ali","Ibrahim"));
+// String [Osama],[Mohamed] ,[Ali] ,[Ibrahim] => Done !
+// let names = (...args) =>{
+//         return args.map(name =>` [${name}]`).join(",") + "=> Done !";
+
+// }
+// console.log("// String",names("Osama","Mohamed","Ali","Ibrahim"));
+
+// ==================================
+// [1] Replace ??? In Return Statement To Get Output
+// [2] Create The Same Function With Regular Syntax
+// [3] Use Array Inside The Arguments To Get The Output
+
+// let myNumbers = [20 , 50 , 10 , 60 ];
+
+// let calc = (one , two , ...nums) => {return  one + two + Number(nums)};
+// console.log(calc(10, 20 , 50));//80
+
+// function  calc (one , two , ...nums){
+//     return  one + two + Number(nums)
+// }
+// console.log(calc(10, 20 , 50));//80
+
+// [==========================={EPsode[71]}==================]
+// let myNums = [1,2,3,4,5,6];
+
+// let newArrays = [];
+
+// for(let i = 0; i < myNums.length;i++){
+// newArrays.push(myNums[i] + myNums[i]);
+// }
+
+// console.log(newArrays);
+
+// ame Ideas With Map
+
+// let addSelf = myNums.map(function(element , index , arr){
+//     // console.log(`Current Element => ${element}`);
+//     // console.log(`Current Index => ${index}`);
+//     // console.log(`Array => ${arr}`);
+//     // console.log(`This  => ${this}`);
+
+//     return element + element;
+// }, 10);
+
+// let addSelf = myNums.map((a) =>  a+a);
+// console.log(addSelf  )
+// function  addition(ele){
+//     return ele + ele;
+// }
+// let add = myNums.map(addition);
+
+// console.log(add);
+
+// [==========================={EPsode[72]}==================]
+// let swappingCases = "elZRo";
+// let invertedNumbers = [1, -10, -20, 15, 100, -30];
+// let ignoreNumbers = "Elz12er4o";
+
+// // let sw = swappingCases.split("").map(function (ele){
+// //     //condition ? True : False
+// //     return  ele === ele.toUpperCase() ? ele.toLowerCase() : ele.toUpperCase();
+// // }).join("");
+
+// // Arrow Function Version
+// let sw = swappingCases
+//   .split("")
+//   .map((a) =>
+//     //condition ? True : False
+//     a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase(),
+//   )
+//   .join("");
+// console.log(sw);
+
+// let inv = invertedNumbers.map(function (ele) {
+//   return -ele;
+// });
+
+// console.log(inv);
+
+// let ign = ignoreNumbers
+//   .split("")
+//   .map(function (ele) {
+//     return isNaN(parseInt(ele)) ? ele : "";
+//   })
+//   .join("");
+
+// console.log(ign);
+// [==========================={EPsode[73]}==================]
+//Get Friends With Name Start With A
+// let friends = ["Ahmed", "Sameh","Sayed","Asmaa","Amgad","Israa"];
+
+// let filterFirends =  friends.filter(function (firend){
+// return  firend.startsWith("A");
+// });
+
+// console.log(filterFirends);
+
+// //Get Even Numbers Only
+// let numbers =[11,20,2,5,17,10];
+
+// let evenNumbers  = numbers.filter(function(el){
+//     return el%2=== 0 ;
+// })
+// console.log(evenNumbers);
+// // Test Map Vs Filter
+
+// let addMap = numbers.map(function (ele){
+//     return ele + ele;
+// })
+
+// console.log(addMap);
+
+// let addFilter = numbers.filter(function (ele){
+//     return ele + ele;
+// })
+
+// console.log(addFilter);
+
+// [==========================={EPsode[74]}==================]
+//  Filter Words More Than 4 Characters
+//  let sentence = "I Love Foood Too Playing Much";
+//  let smallWords = sentence.split(" ").filter(function (el){
+//     return el.length <= 4 ;
+//  })
+
+//  console.log(smallWords);
+
+//  //Filter String + Multiply
+//  let mix = "A13BS2ZX";
+
+//  let filterst = mix.split("").filter(function ( el){
+//     return ! isNaN(parseInt(el)).map(function (el){
+//         return el * el;
+//     })
+//  }).join("");
+
+//  console.log(filterst);
+
+// [==========================={EPsode[75]}==================]
+// let  nums = [10 , 20, 15 , 30 ];
+// let add = nums.reduce(function (acc , current , index , arr){
+//     console.log(`Acc ${acc}`);
+//     console.log(`Current Element => ${current}`);
+//     console.log(`Current Element Index ${index}`);
+//     console.log(`Array => ${arr}`);
+//     console.log(acc + current);
+//     console.log(`################`);
+//     return acc + current;
+// },5)//initival value
+
+// console.log(add);
+
+// [==========================={EPsode[76]}==================]
+// let theBiggest = ["Bla","Propaganda","Other","AAA","Battery","Test","Propagand_Two"];
+
+//  let check = theBiggest.reduce(function (acc , current ){
+//     console.log(`Acc ${acc}`);
+//     console.log(`Current Element => ${current}`);
+
+//     console.log(acc.length > current.length ? acc : current);
+//     console.log(`################`);
+//     return acc.length > current.length ? acc : current;
+
+// })
+
+//   console.log(check);
+
+//   let removeChars = ["E","@","@","L","Z","@","@","E","R","@","O"];
+
+//   let Finaltes = removeChars.filter(function (el){
+//     return !el.startsWith("@");
+//   }).reduce(function (acc , current){
+//       return `${acc}${current}`;
+//   })
+
+//   console.log(Finaltes);
+// [==========================={EPsode[77]}==================]
+
+//   let allLis = document.querySelectorAll("ul li");
+//   let allDivs = document.querySelectorAll("div");
+//   allLis.forEach(function (ele) {
+//     ele.onclick = function (){
+//         allLis.forEach(function (ele){
+//             ele.classList.remove("active");
+//             //remove active class for all element
+//         })
+//         //Add Active Class To This Element
+//        this.classList.add("active");
+//     //    Hide All Divs
+//     allDivs.forEach(function (ele){
+//         ele.style.display  = "none";
+//     })
+//     }
+//   })
+//   console.log(allLis);
+// [==========================={EPsode[78]}==================]
+// {[Higher Order Functions Challenges]
+// You Can Use
+// Space
+// True => 1 => One Time Only In The Code
+// You Cannot Use
+// Numbers
+// Letters
+// you Must Use [Filter + Map + Reduce +Your Knowledge]
+// Order Is Not Important
+// All In One Chain
+// let myString ="1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,z";
+// // let solution = '?????';
+// let solution = myString.split("").filter( function (ele){
+//     return  isNaN(ele) ;
+
+// }).map(function (ele ){
+//     return ele === ',' ? '' : ele === "_" ? " " : ele
+// }).join("").slice(1 , 18)
+// console.log(solution);//Elzero Web School
+// [==========================={EPsode[79]}==================]
+// let user = {
+//   name: "abboud",
+//   age: 24,
+// //   Methods
+//   sayHello: function () {
+// return `Hello `;
+//   },
+// };
+
+// console.log(`The Name ${user.name}
+//     The Age : ${user.age}
+//     The Function ${user.sayHello}`)
+
+// [==========================={EPsode[80]}==================]
+
+// let myVar = "country";
+// let user = {
+//   name: "abboud",
+//   "country of": "Egypt",
+//   country: "yemen",
+//   //   Methods
+// };
+
+// console.log(user.name);
+// console.log(user["name"]);
+// console.log(user.country  );
+// console.log(user.myVar); //user.country
+// console.log(user[myVar  ]); //user.country
+// [==========================={EPsode[81]}==================]
+// let available = true;
+// let user = {
+//   name: "abboud",
+//   age: 38,
+//   skills: ["HTML", "CSS", "JS"],
+//   available: false,
+//   addresses: {
+//     ksa: "Riyadh",
+//     egypt: {
+//       one: "Cair",
+//       two: "Giza",
+//     },
+//   },
+//   checkAv: function () {
+//     if (this.available === true) {
+//       return `The Personal Is available
+// `;
+//     } else {
+//       return `The Persona Is Not available
+// `;
+//     }
+//   },
+// };
+
+// console.log(user.name);
+// console.log(user.age);
+// console.log(user.skills);
+// console.log(user.skills.join(" | "));
+// console.log(user.skills[2]);
+// console.log(user.addresses);
+// console.log(user.addresses.ksa);
+// console.log(user.addresses.egypt);
+// console.log(user.addresses.egypt.two);
+// console.log(user["addresses"].egypt.two);
+// console.log(user["addresses"]["egypt"].two);
+// console.log(user["addresses"]["egypt"]["one"]);
+// console.log(user.checkAv());
+// [==========================={EPsode[82]}==================]
+// Object
+// Create With New Keyword new object();
+
+// let user = new Object({
+//   age: 20
+// });
+
+// console.log(user);
+
+// user.age = 38 ;
+// user["country"] = "Yemen";
+
+// user.sayHello = function (){
+//   return `Hello`
+// }
+
+// console.log(user);
+// console.log(user.age);
+// console.log(user.country);
+
+// console.log(user.sayHello());
+// [==========================={EPsode[83]}==================]
+
+// let user = new Object({
+//   age: 24 ,
+//   ageInDays: function () {
+//     console.log(this )
+//     return this .age * 365;
+//   }
+// });
+
+// console.log(user.age);
+// console.log(user.ageInDays())
+
+// console.log(this);
+// console.log(this === window);
+
+// myVar = 100;
+
+// console.log(window.myVar);
+
+// console.log(this.myVar);
+
+// function sayHello(){
+//   console.log(this);
+// }
+
+// sayHello();
+
+// console.log(sayHello() === window())
+
+// document.getElementById("cl").onclick = function () {
+//   console.log(this);
+// };
+
+// [==========================={EPsode[84]}==================]
+// let user ={
+//   age: 20 ,
+//   doubleAge: function () {
+//     // console.log(this )
+//     return this.age * 2 ;
+//   }
+// }
+// console.log(user);
+// console.log(user.age);
+// console.log(user.doubleAge())
+// console.log(this);
+// let obj = Object.create({});
+
+// obj.a = 100 ;
+
+// console.log(obj);
+
+// let copyObj  = Object.create(user);
+
+// copyObj.age = 50;
+
+// console.log(copyObj);
+// console.log(copyObj.age);
+// console.log(copyObj.doubleAge());
+
+// [==========================={EPsode[85]}==================]
+// let obj1 = {
+//   prop1: 1,
+//   meth1: function () {
+//     return this.prop1;
+//   },
+// };
+
+// let obj2 = {
+//   prop2: 1,
+//   meth2: function () {
+//     return this.prop2;
+//   },
+// };
+
+// let targetObject = {
+//   prop1: 100  ,
+//   prop3: 3,
+// };
+
+// let finalObject = Object.assign(targetObject , obj1 , obj2);
+// finalObject.prop1 = 200 ;
+// finalObject.prop2 = 4 ;
+// console.log(finalObject);
+
+// let newObject = Object.assign({},obj1 ,{prop5: 5 , prop6: 6});
+
+// console.loj(newObject);
+// [==========================={EPsode[86]}==================]
+// let myIdElement  = document.getElementById("my-div");
+// let myTagElements = document.getElementsByTagName("p");
+// let myClassElements = document.getElementsByClassName("my-span");
+// let myQueryElements = document.querySelector("#my-div");
+// let myQueryAllElements = document.querySelectorAll(".my-span");
+
+// console.log(myIdElement);
+// console.log(myTagElements[1]);
+// console.log(myClassElements);
+// console.log(myQueryElements);
+// console.log(myQueryAllElements[1]);
+
+// console.log(document.title);
+// console.log(document.body);
+// console.log(document.forms[0].one.value);
+// console.log(document.links[1].href);
+// [==========================={EPsode[87]}==================]
+// let myElement = document.querySelector(".js");
+
+// console.log(myElement.innerHTML);
+// console.log(myElement.textContent);
+
+// myElement.innerHTML = "Text From <span>Main.js</span> File";
+// myElement.textContent = "Text From <span>Main.js</span> File";
+
+// document.images[0].src = "https://google.com";
+// document.images[0].alt = "no images";
+// document.images[0].title = "picture";
+// document.images[0].id = "picture";
+// document.images[0].className = "img  ";
+
+// let myLink = document.querySelector(".link");
+// console.log(myLink.getAttribute("class"));
+// console.log(myLink.getAttribute("href"));
+// myLink.setAttribute("href","https://twitter.com");
+// myLink.setAttribute("title","Twitter");
+
+// [==========================={EPsode[88]}==================]
+
+// console.log(document.getElementsByTagName("p"[0].attributes))
+// let myP = document.getElementsByTagName("p")[0];
+
+// if(myP.hasAttribute("data-src")){
+//   if(myP.getAttribute("data-src") === ""){
+//     myP.removeAttribute("data-src");
+//   }
+//   else
+//   {
+//     myP.setAttribute("data-src", "New Value");
+//   }
+//   // myP.removeAttribute("data-src");
+// }else
+// {
+//   console.log(`Not Found`);
+// }
+
+// if(myP.hasAttributes()){
+//   console.log(`Has Attributes `);
+// }
+
+// if(document.getElementsByTagName("div")[0].hasAttributes()){
+//   console.log(`Has Attributes    non`);
+// }else
+// {
+//   console.log(`Div Attribues Has Not Attributes `);
+// }
+
+// [==========================={EPsode[89]}==================]
+
+// let myElement = document.createElement("div");
+// let myAttr =  document.createAttribute("data-custom");
+// let myText  = document.createTextNode("Product One");
+// let myComment = document.createComment("This Is Div");
+// myElement.className = "product";
+// myElement.setAttributeNode(myAttr);
+// myElement.setAttribute("data-test","Testing");
+// // ِAppend Text To Element
+// myElement.appendChild(myText);
+
+// // Apppend Comment To Element
+// myElement.appendChild(myComment);
+
+// // Append Element To Body
+// document.body.appendChild(myElement);
+// console.log(myElement);
+
+// [==========================={EPsode[90]}==================]
+
+// for(let i = 0 ; i < 100;i++){
+//     let myMainElement = document.createElement("div");
+// let myHeading = document.createElement("H3");
+// let myParagraph = document.createElement("p");
+
+// let myHeadingText = document.createTextNode(`Product Title ${i+1}`);
+// let myParagraphText = document.createTextNode(`Product Description ${i+1}`);
+
+// // Add Heading Text
+// myHeading.appendChild(myHeadingText);
+
+// // Add Heading To Main Element
+
+// myMainElement.appendChild(myHeading);
+
+// // Add Paragraph
+
+// myMainElement.appendChild(myParagraphText);
+
+// myMainElement.appendChild(myParagraph);
+
+// myMainElement.className = "producto";
+
+// // append child to
+// document.body.appendChild(myMainElement);
+// }
+// [==========================={EPsode[91]}==================]
+// let myElement = document.querySelector("div");
+
+// console.log(myElement);
+
+// console.log(myElement.children);
+// console.log(myElement.children[0]);
+// console.log(myElement.childNodes);
+// console.log(myElement.childNodes[0]);
+// console.log(myElement.firstChild);
+// console.log(myElement.lastChild);
+// console.log(myElement.firstElementChild);
+// console.log(myElement.lastElementChild);
+// [==========================={EPsode[92]}==================]
+// let myBtn = document.getElementById("btn");
+
+// myBtn.onmousedown = function () {
+//   console.log("clicked");
+// };
+
+// window.onresize = function () {
+//   console.log("scroll");
+// };
+
