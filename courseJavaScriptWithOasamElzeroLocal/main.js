@@ -874,3 +874,343 @@
 // window.onresize = function () {
 //   console.log("scroll");
 // };
+// [==========================={EPsode[93]}==================]
+
+// let userInput = document.querySelector("[name='username'");
+// let ageInput = document.querySelector("[name='age'");
+
+// console.log(userInput);
+
+// document.links[0].onmouseenter = function (event){
+//     console.log(event);
+//     event.preventDefault();
+// }
+
+// document.forms[0].onsubmit = function (e) {
+//     let userValid = false ;
+//     let agevalid = false ;
+//     // console.log(userInput.value);
+//     // console.log(userInput.value.length);
+//     if(userInput.value !== "" && userInput.value.length <= 10){
+//         userValid = true;
+//     }
+//      if(ageInput.value !== ""){
+//         agevalid = true ;
+//     }
+//     if (userValid === false || agevalid === false ){
+//         e.preventDefault();
+//     }
+
+// }
+// [==========================={EPsode[94]}==================]
+// let one = document.querySelector(".one");
+
+// let two = document.querySelector(".two");
+
+// window.onload  =  function () {
+//     two.focus();
+// }
+
+// one.onblur = function () {
+//     document.links[0].click()
+// }
+// [==========================={EPsode[95]}==================]
+// let element = document.getElementById("my-div");
+
+// console.log(element.classList);
+
+// console.log(typeof element.classList);
+
+// console.log(element.classList.contains("osama"));
+
+// console.log(element.classList.contains("show"));
+
+// console.log(element.classList.item("2"));
+
+// // console.log(element.classList.add("add-one" , "add-two"));
+
+//  element.onclick = function () {
+//     element.classList.toggle("show")
+//  }
+
+// [==========================={EPsode[96]}==================]
+
+// let myDivStyle = document.getElementById("my-div");
+
+// myDivStyle.style.color = "red";
+// myDivStyle.style.fontWeight = "bold";
+
+// myDivStyle.style.cssText = "font-weight: blod ; color: green; opacity:0.9";
+
+// myDivStyle.style.removeProperty("color");
+
+// myDivStyle.style.setProperty("font-size", "40px", "important");
+
+// document.styleSheets[0].rule[0].style.removeProperty("line-height");
+
+// document.styleSheets[0].cssRules[0].style.setProperty(
+//   "background-color",
+//   "red",
+//   "important",
+// );
+// console.log(
+//   document.styleSheets[0].cssRules[0].style.setProperty(
+//     "background-color",
+//     "red",
+//   ),
+// );
+
+// [==========================={EPsode[97]}==================]
+// let element = document.getElementById("my-div");
+//  let createdP = document.createElement("p");
+
+
+//  element.prepend(createdP );
+
+// element.remove();
+
+// [==========================={EPsode[98]}==================]
+// let span = document.querySelector(".two");
+
+// console.log(span.parentElement);//main div 
+
+// span.oncclick = function () {
+//     span.parentElement.remove();
+// }
+
+// [==========================={EPsode[99]}==================]
+// let myP = document.querySelector("p").cloneNode(true);
+// let myDiv = document.querySelector("div");
+// myP.id =  `${myP.id}-clone`;
+// myDiv.appendChild(myP);
+// [==========================={EPsode[100]}==================]
+
+// let myP = document.querySelector("p");
+
+// myP.onclick = one;
+// function one(){
+//     console.log("Message From onClick 1");
+// }
+
+// function  two(){
+//     console.log("Message From onClick 2");
+
+// }
+
+// window.onload = "abboud";
+
+// myP.addEventListener("click", function (){
+//     console.log("Message From onClick 1 Event ");
+// })
+
+// // myP.addEventListener("click", function (){
+// //     console.log("Message From onClick 1 Event ");
+// // })
+
+// myP.addEventListener("click", one);
+// myP.addEventListener("click",two);
+
+// myP.addEventListener("click","String"); //Error 
+
+//  myP.onclick = function () {
+//     let newP = myP.cloneNode(true);
+//     newP.className = "clone";
+//     document.body.appendChild(newP);
+//  }
+
+// //  let cloned = document.querySelector(".clone"); //Error 
+
+// //  cloned.onclick = function () {
+// //     console.log("Img Cloned ");
+// //  };
+
+
+// document.addEventListener("click", function (e){
+//     if(e.target === "clone"){
+//         console.log("I am Cloned");//e.target العنصر الذي ضغط علية 
+//     }
+// })
+// [==========================={EPsode[101]}==================]
+// const script = document.currentScript;
+
+// // ---- HEADER ----
+// let header = document.createElement("header");
+
+// let logo = document.createElement("div");
+// logo.textContent = "Elzero";
+
+// // القائمة
+// let ulMenu = document.createElement("ul");
+// const menuItems = ["Home", "About", "Service", "Contact"];
+// menuItems.forEach(item => {
+//   let li = document.createElement("li");
+//   li.textContent = item;
+//   ulMenu.appendChild(li);
+// });
+
+// // إضافة logo و ul داخل header
+// header.appendChild(logo);
+// header.appendChild(ulMenu);
+// script.before(header);
+
+// // ---- CSS Header ----
+// header.style.display = "flex";
+// header.style.justifyContent = "space-between";
+// header.style.alignItems = "center";
+// header.style.padding = "5px 40px";
+// header.style.marginTop ="-6px";
+// header.style.marginRight ="-6px";
+// header.style.marginLeft ="-6px";
+
+// header.style.backgroundColor = "#fff";
+// header.style.borderBottom = "1px solid #ddd";
+
+// // Logo
+// logo.style.fontWeight = "bold";
+// logo.style.fontSize = "24px";
+// logo.style.color = "#27ae60"; // اللون الأخضر للشعار
+
+// // القائمة
+// ulMenu.style.listStyle = "none";
+// ulMenu.style.display = "flex";
+// ulMenu.style.gap = "20px";
+// ulMenu.style.margin = "0";
+// ulMenu.style.padding = "0";
+
+// Array.from(ulMenu.children).forEach(li => {
+//   li.style.cursor = "pointer";
+//   li.style.fontWeight = "500";
+//   li.style.color = "#555"; // لون القائمة رمادي مثل الصورة
+// });
+
+// // ---- MAIN GRID ----
+// let main = document.createElement("main");
+// script.before(main);
+
+// main.style.display = "grid";
+// main.style.gridTemplateColumns = "repeat(3, 1fr)";
+// main.style.gap = "20px";
+// main.style.padding = "40px";
+
+// // إنشاء المنتجات من 1 إلى 15
+// for (let i = 1; i <= 15; i++) {
+//   let product = document.createElement("div");
+//   product.style.backgroundColor = "#fff";
+//   product.style.border = "1px solid #ddd";
+//   product.style.borderRadius = "5px";
+//   product.style.padding = "40px 0";
+//   product.style.textAlign = "center";
+//   product.style.boxShadow = "0 2px 5px rgba(0,0,0,0.05)";
+//   product.style.fontFamily = "Arial, sans-serif";
+
+//   let number = document.createElement("h2");
+//   number.textContent = i;
+//   number.style.margin = "0";
+//   number.style.fontWeight = "normal";
+
+//   let label = document.createElement("p");
+//   label.textContent = "Product";
+//   label.style.margin = "5px 0 0 0";
+//   label.style.fontSize = "12px";
+//   label.style.color = "#999";
+
+//   product.appendChild(number);
+//   product.appendChild(label);
+//   main.appendChild(product);
+// }
+
+// // ---- FOOTER ----
+// let footer = document.createElement("footer");
+// footer.textContent = "Copyright 2021";
+// script.before(footer);
+
+// // CSS Footer
+// footer.style.backgroundColor = "#27ae60"; // أخضر مطابق للشعار
+// footer.style.color = "#fff";
+// footer.style.textAlign = "center";
+// footer.style.padding = "20px";
+// footer.style.marginTop = "40px";
+// footer.style.fontWeight = "bold";
+// footer.style.fontSize = "16px";
+// [==========================={EPsode[102-103]}==================]
+
+// window.console.log("welcom yel")
+// window.document.title = "Hello JS ";
+
+// alert("Thi alert ")
+// console.log("This Is Window Can Be ");
+
+// let comfirMsg = confirm("Are You Sure ?");
+
+// // console.log(comfirMsg);
+
+// if (comfirMsg === true){
+//   console.log("Item Deleted ");
+// }else{
+//     console.log("Item Not Deleted ");
+
+// }
+
+
+
+
+// let promptMsg = prompt("Good Day To You?","Write Day 3 Characters ");
+
+// console.log(promptMsg);
+
+
+// [==========================={EPsode[104]}==================]
+
+// setTimeout(function () {
+//   console.log(`Msg `)
+// }, 3000);
+
+
+
+// setTimeout(sayHello, 3000 , "abboud" , 24);
+
+
+// function sayHello ( user , age ){
+//   console.log(`I am Message  ${user} Has Age Is: ${age}`);
+// }
+
+
+// let countru = setTimeout(sayMsg, 3000 );
+
+
+// // console.log(countru);
+
+// function sayMsg (  ){
+//   console.log(`I am Message  `);
+// }
+
+// let btn = document.querySelector("button");
+
+// btn.onclick = function () {
+//   clearTimeout(countru);
+// }
+// [==========================={EPsode[105]}==================]
+     
+// setInterval(function (){
+//   console.log(`Msg`)
+// },1000);
+
+
+// setInterval(sayMsg , 100 , "Oasam", 38);
+
+// function sayMsg(user ,  age ){
+//   console.log(`I am Message For ${user} His Age Is: ${age}`);
+// }
+
+// let div = document.querySelector("div");
+
+// function countdown (){
+//   div.innerHTML -= 1 ;
+//   if (div.innerHTML === "0")
+//   {
+// clearInterval(counter);
+//   }
+  
+// }
+
+// let counter = setInterval(countdown , 1000);
