@@ -2039,3 +2039,40 @@ SubString : substring(Start [Required],End [Optional])
 // }
 
 // let counter = setInterval(countdown , 1000);
+
+// [==========================={EPsode[106]}==================]
+
+// console.log(location.href);
+// location.href = "https://google.com"; هذا ما تستبدا enter  من hostry  
+// location.href = "/#sec02";
+
+// console.log(location.host);
+// console.log(location.hostname);
+
+// console.log(location.protocol);
+
+// console.log(location.hash);
+
+// location.replace()
+
+
+// location.assign()
+
+// // [==========================={EPsode[107]}==================]
+// setTimeout( function () {
+//     window.open("https://google.com","_self","width=400,height=400,left=200,top=200");
+// },2000)
+
+// [==========================={EPsode[108]}==================]
+
+// console.log(history);
+
+// [==========================={EPsode[109]}==================]
+// let myNewWindow = window.open("https://google.com","","width=500,height=500");
+
+
+// window.scrollTo({
+//     left: 500 ,
+//     top: 200,
+//     behavior:"smooth"
+// })
