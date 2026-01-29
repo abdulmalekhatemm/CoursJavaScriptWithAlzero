@@ -1250,3 +1250,26 @@
 //     top: 200,
 //     behavior:"smooth"
 // })
+// [==========================={EPsode[110]}==================]
+
+// console.log(window.screenX === window.pageXOffset);
+
+// let btn  = document.querySelector("button");
+
+// window.onscroll =  function () {
+//     if(window.scrollY >= 600){
+//         // console.log(`Scrolling Y Value Is ${window.scrollY}`);
+//         btn.style.display = "block";
+//     }else
+//     {
+//         btn.style.display = "none";
+//     }
+// }
+
+// btn.onclick =  function () {
+//     window.scrollTo({
+//         left: 0 , 
+//         top: 0 ,
+//         behavior: "smooth"
+//     })
+// }
