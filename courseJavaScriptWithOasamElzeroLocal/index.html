@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <style>
-    body{
+    /* body{
     width: 5000px;
         height: 5000px;
     }
@@ -23,7 +23,53 @@ background-color: red;
     bottom: 20px;
     right: 20px;
     display: none;
-    }
+    } */
+     body{
+        background-color: #eee;
+     }
+     ul{
+        padding: 0px;
+        margin: 0px;
+        background-color: #eee;
+        margin: 20px auto;
+        padding: 20px;
+        width: 400px;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+     }
+     ul li{
+        width: 60px;
+        height: 60px;
+        border: 2px solid transparent;
+        opacity: 0.4;
+        cursor: pointer;
+        transition: 0.3s;
+     }
+     ul li.active 
+     ul il:hover{
+        opacity: 1;
+     }
+
+     ul li:first-child{
+        background-color: red;
+     }
+     ul li:nth-child(2){
+        background-color: green;
+     }
+        ul li:nth-child(3){
+        background-color: blue;
+     }
+        ul li:nth-child(4){
+        background-color: black;
+     }
+     .experiment {
+        background-color: red;
+        width: 600px;
+        height: 300px;
+        margin: 20px auto;
+     }
 </style>
 <body>
 <!-- <button id="show">shwo</button>
@@ -104,7 +150,14 @@ Div Has <span>Span</span>
  <!-- <div>5</div> -->
   <!-- <div id="sec01">Section One </div>
   <div id="sec02">Section Two</div>  -->
-  <button>Up</button>
+  <!-- <button>Up</button> -->
+   <ul>
+    <li class="active"  data-color="red"></li>
+    <li data-color="green"></li>
+    <li data-color="blue"></li>
+    <li data-color="black"></li>
+   </ul>
+   <div class="experiment"></div>
 <script src="main.js"></script> 
 </body>
 </html>
