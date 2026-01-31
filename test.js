@@ -2159,3 +2159,13 @@ SubString : substring(Start [Required],End [Optional])
 //     exp.style.backgroundColor = e.currentTarget.dataset.color ;
 //     })
 // })
+// [==========================={EPsode[113 ]}==================]
+// window.localStorage.setItem("color","red");
+// window.sessionStorage.setItem("color","blue");
+
+// document.querySelector(".name").onblur = function () {
+//     // console.log(this.value);
+//     // no exceute 
+//     // window.localStorage.setItem("input-name", this.value);
+//     window.sessionStorage.setItem("input-name", this.value)
+// }
