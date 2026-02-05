@@ -964,7 +964,6 @@
 // let element = document.getElementById("my-div");
 //  let createdP = document.createElement("p");
 
-
 //  element.prepend(createdP );
 
 // element.remove();
@@ -972,7 +971,7 @@
 // [==========================={EPsode[98]}==================]
 // let span = document.querySelector(".two");
 
-// console.log(span.parentElement);//main div 
+// console.log(span.parentElement);//main div
 
 // span.oncclick = function () {
 //     span.parentElement.remove();
@@ -1010,7 +1009,7 @@
 // myP.addEventListener("click", one);
 // myP.addEventListener("click",two);
 
-// myP.addEventListener("click","String"); //Error 
+// myP.addEventListener("click","String"); //Error
 
 //  myP.onclick = function () {
 //     let newP = myP.cloneNode(true);
@@ -1018,16 +1017,15 @@
 //     document.body.appendChild(newP);
 //  }
 
-// //  let cloned = document.querySelector(".clone"); //Error 
+// //  let cloned = document.querySelector(".clone"); //Error
 
 // //  cloned.onclick = function () {
 // //     console.log("Img Cloned ");
 // //  };
 
-
 // document.addEventListener("click", function (e){
 //     if(e.target === "clone"){
-//         console.log("I am Cloned");//e.target العنصر الذي ضغط علية 
+//         console.log("I am Cloned");//e.target العنصر الذي ضغط علية
 //     }
 // })
 // [==========================={EPsode[101]}==================]
@@ -1151,13 +1149,9 @@
 
 // }
 
-
-
-
 // let promptMsg = prompt("Good Day To You?","Write Day 3 Characters ");
 
 // console.log(promptMsg);
-
 
 // [==========================={EPsode[104]}==================]
 
@@ -1165,18 +1159,13 @@
 //   console.log(`Msg `)
 // }, 3000);
 
-
-
 // setTimeout(sayHello, 3000 , "abboud" , 24);
-
 
 // function sayHello ( user , age ){
 //   console.log(`I am Message  ${user} Has Age Is: ${age}`);
 // }
 
-
 // let countru = setTimeout(sayMsg, 3000 );
-
 
 // // console.log(countru);
 
@@ -1190,11 +1179,10 @@
 //   clearTimeout(countru);
 // }
 // [==========================={EPsode[105]}==================]
-     
+
 // setInterval(function (){
 //   console.log(`Msg`)
 // },1000);
-
 
 // setInterval(sayMsg , 100 , "Oasam", 38);
 
@@ -1210,14 +1198,14 @@
 //   {
 // clearInterval(counter);
 //   }
-  
+
 // }
 
 // let counter = setInterval(countdown , 1000);
 // [==========================={EPsode[106]}==================]
 
 // console.log(location.href);
-// location.href = "https://google.com"; هذا ما تستبدا enter  من hostry  
+// location.href = "https://google.com"; هذا ما تستبدا enter  من hostry
 // location.href = "/#sec02";
 
 // console.log(location.host);
@@ -1228,7 +1216,6 @@
 // console.log(location.hash);
 
 // location.replace()
-
 
 // location.assign()
 
@@ -1243,7 +1230,6 @@
 
 // [==========================={EPsode[109]}==================]
 // let myNewWindow = window.open("https://google.com","","width=500,height=500");
-
 
 // window.scrollTo({
 //     left: 500 ,
@@ -1268,7 +1254,7 @@
 
 // btn.onclick =  function () {
 //     window.scrollTo({
-//         left: 0 , 
+//         left: 0 ,
 //         top: 0 ,
 //         behavior: "smooth"
 //     })
@@ -1279,8 +1265,7 @@
 // window.localStorage.fontWeight = "bold";
 // window.localStorage['fontSize'] = '20px';
 
-
-// //get 
+// //get
 // console.log(window.localStorage.getItem("color"));
 // console.log(window.localStorage.color);
 // console.log(window.localStorage["color"]);
@@ -1289,14 +1274,13 @@
 
 // // window.localStorage.removeItem("color");
 
-
-// // //Remove All 
+// // //Remove All
 
 // // window.localStorage.clear();
 
-// // Get Key 
+// // Get Key
 // console.log(window.localStorage.key(0))
-// //set Color In Page 
+// //set Color In Page
 
 // document.body.style.backgroundColor =  window.localStorage.getItem("color");
 // console.log(window.localStorage);
@@ -1307,28 +1291,28 @@
 
 // // window.localStorage.clear()
 // if(window.localStorage.getItem("color")){
-//     // If There Color In LOcalStorage 
-//     // [1] Add Color To Div 
+//     // If There Color In LOcalStorage
+//     // [1] Add Color To Div
 //         exp.style.backgroundColor = window.localStorage.getItem("color");
-//     //    [2] Remove Active FRom class FRom All Lis 
+//     //    [2] Remove Active FRom class FRom All Lis
 //        lis.forEach((li)=>{
 //             li.classList.remove("active");
 //         });
-//         // [3]Add Active Class To Current Color 
+//         // [3]Add Active Class To Current Color
 //         document.querySelector(`[data-color="${window.localStorage.getItem("color")}"]`).classList.add("active");
 // }
 // lis.forEach((li) => {
 //     li.addEventListener("click", (e) => {
 //         // console.log(e.currentTarget.dataset.color);
-//         // Remove Active Class From all Lis 
+//         // Remove Active Class From all Lis
 //         lis.forEach((li)=>{
 //             li.classList.remove("active");
 //         });
-//         // Add Active Class To Cureent Element 
+//         // Add Active Class To Cureent Element
 //         e.currentTarget.classList.add("active");
-//         // Add Current Clor To Local Storage 
+//         // Add Current Clor To Local Storage
 //         window.localStorage.setItem("color", e.currentTarget.dataset.color);
-//     //    Change Dive Background Color 
+//     //    Change Dive Background Color
 //     exp.style.backgroundColor = e.currentTarget.dataset.color ;
 //     })
 // })
@@ -1338,7 +1322,455 @@
 
 // document.querySelector(".name").onblur = function () {
 //     // console.log(this.value);
-//     // no exceute 
+//     // no exceute
 //     // window.localStorage.setItem("input-name", this.value);
 //     window.sessionStorage.setItem("input-name", this.value)
 // }
+// [==========================={EPsode[114]}==================]
+// Challenges
+// get Data From Input And Set In LocalStorage
+
+//Wait For The Loading Tje Page
+// document.addEventListener("DOMContentLoaded",()=>{
+// // Get The Input For The Fileds
+// const tascInput = document.querySelector(".input");
+// const addTasc   = document.querySelector(".add");
+// const theContainer = document.querySelector(".container");
+
+// // add Tasc
+
+// addTasc.addEventListener("click",addTascFunc );
+
+// // Fuction To Add Tasc
+// function addTascFunc(event){
+
+//     event.preventDefault();
+//     if(tascInput.value !== ""){
+//         // Create The Main Dive For Container The Value
+//         const mainDiv = document.createElement("div");
+//         mainDiv.classList.add("tasc-box");
+
+//         // create The Element For Put Value in It
+//         const textp = document.createElement("p");
+//         // textp.textContent = tascInput.value;
+
+//         // Save Tasc In Local Storage
+//         window.localStorage.setItem("tasc",JSON.stringify(tascInput.value));
+//         // Get Tasc From Local Storage
+//         textp.textContent = window.localStorage.getItem("tasc");
+//         textp.classList.add("text-tasc");
+
+//         // Create Delete Button
+//         const deleteButton = document.createElement("button");
+//         deleteButton.textContent = "Delete";
+//         deleteButton.classList.add("delete-tasc");
+
+//         // Add Event Listener To The Deleted Button
+//         deleteButton.addEventListener("click", deleteTascFunc);
+
+//         // Append The P To The Main Dive
+//         mainDiv.appendChild(textp);
+//         // Append The Deleted Button
+//         textp.appendChild(deleteButton);
+//         // Append The Main Dive To The Container
+//         theContainer.appendChild(mainDiv);
+
+//         // clear The Input Filed
+//         tascInput.value = "";
+//     }
+
+// }
+// // Function To Save Tasc In Local Storage
+// function deleteTascFunc(event){
+//     const deleteButton = event.target.parentElement;
+
+//         // Remove The Parent Element
+//         deleteButton.remove();
+
+// }
+
+// });
+// =========================================================
+// document.addEventListener("DOMContentLoaded", () => {
+//     const tascInput = document.querySelector(".input");
+//     const addTasc = document.querySelector(".add");
+//     const theContainer = document.querySelector(".container");
+
+//     // تحميل المهام عند بدء التشغيل
+//     loadTasks();
+
+//     addTasc.addEventListener("click", addTascFunc);
+
+//     function addTascFunc(event) {
+//         event.preventDefault();
+//         const taskText = tascInput.value.trim();
+//         if (taskText !== "") {
+//             // عرض المهمة في الواجهة
+//             displayTask(taskText);
+//             // حفظ المهمة في localStorage
+//             saveTaskToLocalStorage(taskText);
+//             // مسح حقل الإدخال
+//             tascInput.value = "";
+//         }
+//     }
+
+//     function displayTask(taskText) {
+//         // إنشاء العناصر لعرض المهمة
+//         const mainDiv = document.createElement("div");
+//         mainDiv.classList.add("tasc-box");
+
+//         const textp = document.createElement("p");
+//         textp.textContent = taskText;
+//         textp.classList.add("text-tasc");
+
+//         const deleteButton = document.createElement("button");
+//         deleteButton.textContent = "Delete";
+//         deleteButton.classList.add("delete-tasc");
+//         deleteButton.addEventListener("click", deleteTascFunc);
+
+//         // التجميع: وضع النص وزر الحذف داخل الحاوية الرئيسية
+//        textp.appendChild(deleteButton);
+//         mainDiv.appendChild(textp);
+
+//         // mainDiv.appendChild(deleteButton);
+//         theContainer.appendChild(mainDiv);
+//     }
+
+//     function deleteTascFunc(event) {
+//         // تصحيح الخطأ الإملائي: استخدم event.target وليس event.traget
+//         const taskItem = event.target.parentElement; // الحاوية الرئيسية (mainDiv)
+//         const taskText = taskItem.querySelector(".text-tasc").textContent;
+
+//         // حذف من الواجهة
+//         taskItem.remove();
+
+//         // حذف من localStorage
+//         removeTaskFromLocalStorage(taskText);
+//     }
+
+//     function saveTaskToLocalStorage(task) {
+//         // جلب المهام الحالية من localStorage (مصفوفة)
+//         let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+//         // إضافة المهمة الجديدة
+//         tasks.push(task);
+//         // حفظ المصفوفة المحدثة
+//         localStorage.setItem("tasks", JSON.stringify(tasks));
+//     }
+
+//     function removeTaskFromLocalStorage(taskToRemove) {
+//         // جلب المهام الحالية
+//         let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+//         // تصفية المهمة المراد إزالتها
+//         tasks = tasks.filter(task => task !== taskToRemove);
+//         // حفظ المصفوفة المحدثة
+//         localStorage.setItem("tasks", JSON.stringify(tasks));
+//     }
+
+//     function loadTasks() {
+//         // جلب المهام من localStorage
+//         const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+//         // عرض كل مهمة
+//         tasks.forEach(task => {
+//             displayTask(task);
+//         });
+//     }
+// });
+// [==========================={EPsode[115]}==================]
+
+// let a = 1;
+// let b = 2;
+// let c = 3;
+// let d = 4;
+// let myFirednds = ["Ahmed","Sayed","Ali","Maysa"];
+
+// [a="ali",b, c, d , e = "oasam"] = myFirednds;
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+
+// console.log(e);
+// [==========================={EPsode[116]}==================]
+// let title = "Elzero";
+// let desc  = "Elzero Web School";
+// let markup =`<div class="card">
+// <div class="child">
+// <h>${title}</h>
+// <p> ${desc} </p>
+// </div>
+// </div>
+// `;
+
+// console.log(markup);
+// document.body.innerHTML = markup;
+// [==========================={EPsode[117]}=================]
+// let book ="Video";
+// let Video = "Book";
+
+// // Save Book in satch
+// let satch = book ;
+
+// // Change Book Value
+// book = Video ;//
+
+// // Change Video Value To Book
+// Video = satch ;
+// [book , Video ]  = [Video , book];
+
+// console.log(`Book Is ${book}`);
+// console.log(`Video Is ${Video}`);
+// [==========================={EPsode[118]}=================]
+// let user = {
+//     theName: "abboud",
+//     theAge: 24,
+//     theTitle:"Developer",
+//     theCountry:"Yemen",
+// }
+
+// console.log(user);
+// console.log(user.theName);
+// console.log(user.theAge);
+// console.log(user.theTitle);
+// console.log(user.theCountry);
+// let  theName = user.theName;
+// let theAge = user.theAge;
+// let theTitle = user.theTitle;
+// let theCountry = user.theCountry;
+// console.log("###########################");
+// console.log(theName);
+// console.log(theAge);
+// console.log(theTitle);
+// console.log(theCountry);
+
+//  ({theName , theAge , theTitle , theCountry } = user);
+
+//  const {theName ,  theTitle , theCountry } = user ;
+// console.log("###########################");
+
+// console.log(theName);
+
+// console.log(theTitle);
+// console.log(theCountry);
+
+// [==========================={EPsode[119]}=================]
+
+// let user = {
+//     theName: "abboud",
+//     theAge: 24,
+//     theTitle:"Developer",
+//     theCountry:"Yemen",
+//     Color:"Block",
+//     Skills:{
+//         html: 70 ,
+//         css: 80 ,
+//         JS: 90
+//     }
+// }
+
+//  const {theName:n  ,  theTitle:t  , theCountry: tc ,Color:C = "Red" , Skills:{html , css:cs }, } = user ;
+// console.log("###########################");
+
+// console.log(n);
+// console.log(t);
+// console.log(tc);
+// console.log(C);
+// console.log(`The HTML  SkilProgress Is ${html}%`);
+// console.log(`The CSS   SkilProgress Is ${cs}%`);
+
+// const {html:skillsOne ,css:skillsTwo } = user.Skills;
+
+// console.log(`The HTML  SkilProgress Is ${skillsOne}%`);
+// console.log(`The CSS   SkilProgress Is ${skillsTwo}%`);
+// [==========================={EPsode[120]}=================]
+// let users = {
+//   theName: "abboud",
+//   theAge: 24,
+//   theTitle: "Developer",
+//   theCountry: "Yemen",
+//   Color: "Block",
+//   Skills: {
+//     html: 70,
+//     css: 80,
+//     JS: 90,
+//   },
+// };
+
+// showDetails(users);
+
+// function showDetails(obj) {
+//   console.log(`Your Name IS ${obj.theName}`);
+//   console.log(`Your Age IS ${obj.theAge}`);
+//   console.log(`Your CSS Skills  IS ${obj.Skills.css}%`);
+// }
+
+// function showDetails({theName:n , theAge:a , Skills:{html:h , css: cs},}= users) {
+//   console.log(`Your Name IS ${n}`);
+//   console.log(`Your Age IS ${a}`);
+//     console.log(`Your HTML Skills  IS ${h}%`);
+//   console.log(`Your CSS Skills  IS ${cs}%`);
+// }
+// [==========================={EPsode[121]}=================]
+// let user = {
+//   theName: "abboud",
+//   theAge: 24,
+//   skills: ["HTML", "CSS", "JS"],
+//   address: {
+//     egypt: "Cairo",
+//     ksa: "Riyadh",
+//   },
+// };
+
+// const {
+//   theName: n,
+//   theAge: a,
+//   skills: [one, two, three],
+//   address: { egypt: e },
+// } = user;
+
+// console.log(`Your Name Is ${n}`);
+// console.log(`Your Age Is ${a}`);
+// console.log(`Your Live In  Is ${e}`);
+// console.log(`Your Skills Is One : ${one}`);
+// console.log(`Your Skills Is Two : ${two}`);
+// console.log(`Your Skills Is Three : ${three}`);
+// [==========================={EPsode[122]}=================]
+// Destructuring
+// --Challenge
+// The Method One
+// let chosen = 2;
+// let myFirends = [
+//   { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
+//   { title: "Ahomed", age: 24, available: false, skills: ["Python", "Django"] },
+//   { title: "abboud", age: 33, available: false, skills: ["PHP", "Laravel1"] },
+// ];
+
+// console.log(myFirends[0].skills[length - 1]);
+
+// if (chosen === 1) {
+//   let {
+//     title: t,
+//     age: a,
+//     available: av,
+//     skills: [s1, s2],
+//   } = myFirends[0];
+//   console.log(t);
+//   console.log(a);
+// ;
+//   // console.log(s2);
+//   if (av === true) {
+//     console.log("Available");
+//   } else {
+//     console.log("Not Available");
+//   }
+//     console.log(s2)
+// }
+// else if (chosen === 2) {
+//   let {
+//     title: t,
+//     age: a,
+//     available: av,
+//     skills: [s1, s2],
+//   } = myFirends[1];
+//   console.log(t);
+//   console.log(a);
+
+//   // console.log(s2);
+//   if (av === true) {
+//     console.log("Available");
+//   } else {
+//     console.log("Not Available");
+//   }
+//     console.log(s2);
+// }
+// else if (chosen === 3) {
+//   let {
+//     title: t,
+//     age: a,
+//     available: av,
+//     skills: [s1, s2],
+//   } = myFirends[2];
+//   console.log(t);
+//   console.log(a);
+//   console.log(s2);
+//   // console.log(s2);
+//   if (av === true) {
+//     console.log("Available");
+//   } else {
+//     console.log("Not Available");
+//   }
+//    console.log(s2);
+// }
+
+// =============================================
+
+// // The Method One
+// let chosen = 3;
+// let myFirends = [
+//   { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
+//   { title: "Ahomed", age: 24, available: false, skills: ["Python", "Django"] },
+//   { title: "abboud", age: 33, available: false, skills: ["PHP", "Laravel1"] },
+// ];
+
+// // console.log(myFirends[0].skills[length - 1]);
+// let {
+//   title: t,
+//   age: a,
+//   available: av,
+//   skills: [s1, s2],
+// } = myFirends[chosen - 1];
+// if (chosen === 1) {
+//   console.log(t);
+//   console.log(a);
+//   // console.log(s2);
+//   if (av === true) {
+//     console.log("Available");
+//   } else {
+//     console.log("Not Available");
+//   }
+//   console.log(s2);
+// } else if (chosen === 2) {
+//   console.log(t);
+//   console.log(a);
+
+//   // console.log(s2);
+//   if (av === true) {
+//     console.log("Available");
+//   } else {
+//     console.log("Not Available");
+//   }
+//   console.log(s2);
+// } else if (chosen === 3) {
+//   console.log(t);
+//   console.log(a);
+//   console.log(s2);
+//   // console.log(s2);
+//   if (av === true) {
+//     console.log("Available");
+//   } else {
+//     console.log("Not Available");
+//   }
+//   console.log(s2);
+// }
+// ==========================================================
+
+// // The Method One
+// let chosen = 3;
+// let myFirends = [
+//   { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
+//   { title: "Ahomed", age: 24, available: false, skills: ["Python", "Django"] },
+//   { title: "abboud", age: 33, available: false, skills: ["PHP", "Laravel1"] },
+// ];
+
+// // console.log(myFirends[0].skills[length - 1]);
+// let {
+//   title: t,
+//   age: a,
+//   available: av,
+//   skills: [,lastSkills],
+// } = myFirends[chosen - 1];
+
+// console.log(t);
+// console.log(a);
+// console.log(av ===true ? "Available" : "Not Available");
+// console.log(lastSkills);

@@ -71,6 +71,42 @@ background-color: red;
         margin: 20px auto;
      }
         */
+     
+.container {
+    background-color: #b3b2b2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    flex-grow: 1; /* يجعل حقل الإدخال يملأ المساحة المتبقية */
+}
+
+.add {
+    background-color: #e74c3c; /* الزر الأحمر */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add:hover {
+    background-color: #c0392b;
+}
 </style>
 <body>
 <!-- <button id="show">shwo</button>
