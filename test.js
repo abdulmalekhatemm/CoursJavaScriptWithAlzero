@@ -2618,3 +2618,614 @@ SubString : substring(Start [Required],End [Optional])
 // console.log(a);
 // console.log(av ===true ? "Available" : "Not Available");
 // console.log(lastSkills);
+
+// [==========================={EPsode[123]}=================]
+// let myData = [1, 1, 1, 2, 3, "A"];
+// // let myUniqueData = new Set([1, 1, 1, 2, 3]);
+// // let myUniqueData = new Set(myData);
+// // let myUniqueData = new Set().add(1).add(1).add(1).add(2).add(3);
+// let myUniqueData = new Set();
+// myUniqueData.add(1).add(1).add(1);
+// myUniqueData.add(2).add(3).add("A");
+// console.log(myData);
+// // myUniqueData.delete(2);
+// console.log(myUniqueData.delete(2));
+
+// console.log(`The Has Letter A Is : ${myUniqueData.has("A".toUpperCase())}`);
+// console.log(myUniqueData);
+// console.log(myUniqueData.size);
+// console.log(myData[0]);
+// console.log(myUniqueData[0]);
+
+// myUniqueData.clear();
+// console.log(myUniqueData);
+// [==========================={EPsode[124]}=================]
+// Data Type
+
+// let mySet = new Set([1, 1, 1, 2, 4, "A", "A"]);
+
+// console.log(mySet);
+// // Values + Keys [Alias For Values ]
+// let iterator = mySet.keys();
+// console.log(iterator);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next());
+
+// // forEach
+
+// mySet.forEach((el) => console.log(el));
+// console.log("#".repeat(20));
+// // Type  Of  Data
+
+// let myws = new WeakSet([{A: 1  , B:   2}]);
+
+// console.log(myws);
+
+// weakset use cases
+// [==========================={EPsode[125]}=================]
+// let myObject =  Object();
+// let myEmptyObJects =  Object.create(null);
+// let myMap  = new Map();
+
+// console.log(myObject);
+// console.log(myEmptyObJects);
+// console.log(myMap);
+// let myNewObjects = {
+//     10:"Number",
+//     "10":"String",
+// };
+// console.log(myNewObjects[10]);
+// // let myNewMap = {
+// //     10:"Number",
+// //     "10":"String",
+// // };
+// myMap.set(10,"Number");
+// myMap.set("10","String");
+// myMap.set(true,"Boolean");
+// myMap.set({a:1,b:2,m:3},"object");
+// console.log(myMap.get(10));
+// console.log(myMap.get("10"));
+
+// console.log(myNewObjects);
+// console.log(myMap);
+
+// [==========================={EPsode[126]}=================]
+
+// let myMap = new Map([
+//     [10, "Number"],
+//     ["Name", "String"],
+//     [false, "Boolean"]
+// ]);
+
+// myMap.set(10, "Number");
+// myMap.set("Name", "String");
+
+// console.log(myMap.get(10));
+// console.log(myMap.get("Name"));
+// console.log(myMap.size);
+// console.log(myMap.delete("Name"));
+// console.log(myMap.size);
+
+// // myMap.clear();
+// console.log("#".repeat(10));
+// console.log(myMap.has(false));
+// console.log("#".repeat(10));
+// console.log(myMap.size);
+// [==========================={EPsode[127]}=================]
+
+// let mapUser = {themName:"Elzero"};
+
+// let myMap =  new Map();
+
+// myMap.set(mapUser , "Object Value");
+
+// mapUser = null;  //Override The Reference
+
+// console.log(myMap);
+// [==========================={EPsode[128]}=================]
+
+// console.log(Array.from("abboud"));
+// console.log(Array.from("123456", function (n) {
+//     return +n + +n;
+// }));
+
+// console.log(Array.from("123456",  (n) => +n + +n));
+
+// let myArray  =[1,1,1,2,3,4];
+
+// let mySet = new Set(myArray);
+
+// // console.log(mySet);
+
+// // console.log(Array.from(mySet));
+
+// console.log([...new Set(myArray)]); //Future
+
+// // function  testArgs (){
+// //     return  arguments;
+// // }
+
+// // console.log(testArgs("Osama","Ahomed","sayad"));
+// function  af (){
+//     return  Array.from(arguments);
+// }
+
+// console.log(af("Osama","Ahomed","sayad" ,1,2,3,4));
+// [==========================={EPsode[129]}=================]
+// 1/4
+// from(iterable: Iterable<any> | ArrayLike<any>): any[]
+// An iterable object to convert to an array.
+
+// Creates an array from an iterable object.
+
+// let myArray = [10,20,30,40,50,"A","B"];
+
+// // myArray.copyWithin(3); //[10, 20, 30, 10, 20, 30, 40]
+
+// // myArray.copyWithin(4,6); //[10, 20, 30, 40, 'B', 'A', 'B']
+
+// // myArray.copyWithin(4,-1); //[10, 20, 30, 40, 'B', 'A', 'B']
+
+// // myArray.copyWithin(4,-2); //[10, 20, 30, 40, 'A', 'B', 'B']
+
+// myArray.copyWithin(1,5,6);
+// console.log(myArray);
+// [==========================={EPsode[130]}=================]
+// let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9,10];
+// let myNumbers = 5;
+
+// //    let check = nums.some(function(e) {
+// //     console.log("Test");
+// //     return e > 5;
+// //    })
+
+// let check = nums.some(function (e) {
+//   console.log(this);
+//   return e > this;
+// }, myNumbers);
+
+// //   let check = nums.some((e) =>  e > 5);
+
+// console.log(check);
+
+// function checkValues(arr, val) {
+//   return arr.some(function (e) {
+//     return e === val;
+//   });
+// }
+
+// console.log(checkValues(nums, 2));
+
+// let range = {
+//     min: 10 ,
+//     max: 20
+// };
+
+// let checkNumberInRange = nums.some(function (e){
+//     // console.log(this.min);
+//     // console.log(this.max);
+//     return e >= this.min && e <= this.max;
+// },range);
+
+// console.log(checkNumberInRange);
+// [==========================={EPsode[131]}=================]
+// let locations = {
+//     20:"Place 1",
+//      30:"Place 2",
+//       10:"Place 3",
+//        40:"Place 4",
+// };
+
+// let mainLocation = 2 ;
+
+// let locationsArray  = Object.keys(locations);
+
+// let locationsArrayNumber = locationsArray.map((n)=> +n);
+
+// console.log(locationsArray);
+
+// console.log(locationsArrayNumber);
+
+// let checkEvery = locationsArray.every(function (e) {
+//     return e > this;
+// }, mainLocation);
+
+// console.log(checkEvery);
+// [==========================={EPsode[132]}=================]
+
+//Spread with string  => Expand String
+// console.log("Osama");
+// console.log(..."Osama");
+// console.log([..."Osama"]);
+// //Concatenate Arrays
+// let myArray1 = [1, 2, 3];
+// let myArray2 = [4, 5, 6];
+
+// let allArrays = [...myArray1, ...myArray2];
+
+// console.log(allArrays);
+// //Copy Array
+// let copiedArray = [...myArray1];
+
+// console.log(copiedArray);
+// //Push Inside Array
+
+// let allFriends = ["Osama", "Ahomed", "Ali", "Abboud"];
+// let thisYearFireds = ["Mammhed", "abb ali", "sama", ""];
+
+// allFriends.push(...thisYearFireds);
+
+// console.log(allFriends);
+// //Use With Math Object
+
+// let myNums = [10, 20, -100, 100, 1000, 500];
+
+// console.log(Math.max(...myNums));
+
+// //Spread With Objects => Merge Objects
+// let objOne = {
+//   a: 1,
+//   b: 2,
+// };
+
+// let objTwo = {
+//   c: 3,
+//   d: 4,
+// };
+
+// console.log({ ...objOne, ...objTwo, e: 5 });
+
+// [==========================={EPsode[133]}=================]
+/* Map And Set + What You Learn => Challenge 
+ Requirements 
+ ---You Cant Use Numbers Or True Or False 
+ ---Dot Use Array Indexes 
+ ---You Cant USe Loop
+ ---You Cant Use Any Higher Order  Function 
+ ---Only One Line Solution  Inside Console 
+ ---If You Use Length => Then Only In Calculation
+ --Hints 
+ ---You Can Use * Operator  Only In Calculation 
+ --Set 
+ --Spread Object Methods 
+
+*/
+// let n1 = [10, 30, 10, 20];
+// let n2 = [30, 20, 10];
+
+// console.log(Math.sqrt([...new Set(n1)].length * [...new Set(n1)].length) )
+// console.log(new Set(n2))
+// console.log(--n2.length);  //210
+
+// console.log(`Your Solution Here ${([n1[0] * n2[1]])}`);
+// console.log(`Your Solution Here ${([n1.length * n2.length])}`);
+// console.log(`Your Solution Here Pow : ${([Math.pow((--n2.length) ,(--n2.length))])}`);
+// console.log(`Your Solution Here Set : ${[...new Set (n1)].length * Math.pow([...new Set(n2)].length,[...new Set(n2)].length)}`);
+
+// console.log(
+//   Math.pow([...new Set(n1)].length, [...new Set(n2)].length) *
+//     Math.pow([...new Set(n1)].length, [...new Set(n2)].length),
+// );
+
+// console.log([...new Set(n1)][length]);
+// console.log([...new Set(n1.length)]);
+
+// console.log([...new Set(n1)].length * Math.pow([...new Set(n2)].length, [...new Set(n2)].length));
+
+// console.log()
+
+// // console.log([...new Set(n2).size] )
+
+// console.log(Math.pow([...new Set(n1)].length * [...new Set(n2)].length));
+// [==========================={EPsode[134]}=================]
+// let str1 = '10 20 100 10000 5000';
+// let str2 = 'Os1 Os2 Os123 Os1234 Os123Os Os12312Os123';
+
+// let invalidEmail = 'Osama@@@gmail....com';
+// let validEmail = 'o@nn.as';
+
+// let ip = '192.168.2.1'; //IPv4
+
+// let url = 'elzero.org';
+// let url = 'elzero.org/';
+// let url = 'http://elzero.org';
+// let url = 'http://www.elzero.org/';
+// let url = 'http://.elzero.org';
+// let url = 'https:www.elzero.org/';
+// let url = 'https:www.elzero.org/?facebookid=fdskjfhdskfh';
+// [==========================={EPsode[135]}=================]
+// {[Regular Expression
+// let myString =  "Hello Elzero Web School I Love elzero";
+// let regex = /elzero/ig;
+
+// console.log(myString.match(regex));
+
+// [==========================={EPsode[136]}=================]
+
+// let tld = "Com Net Org Info Code Io";
+// let tldRe = /(org|info|io)/ig;
+
+// console.log(tld.match(tldRe));
+
+// let nums = "12345678910";
+
+// let numsRe  = /[0-2]/g;
+
+// console.log(nums.match(numsRe));
+
+// let notNums = "12345678910";
+
+// let notNsRe  = /[^0-2]/g;
+
+// console.log(notNums.match(notNsRe));
+
+// let specialNums = "1!2@3#4$5%78910";
+
+// let specialNumsRe  = /[^0-9]/g;
+
+// console.log(specialNums.match(specialNumsRe));
+
+// let practice = "Os1  Os1Os Os2Os  Os2 Os8 Os8Os";
+
+// let practiceRe  = /Os[5-9]Os/g;
+
+// console.log(practice.match(practiceRe));
+// [==========================={EPsode[137]}=================]
+// let myString = "AaBbcdefG1234!234%^8*";
+// let atozSmall = /[a-z]/g;
+// let NotAtoZSmall = /[^a-z]/g;
+// let atoZCoptial = /[A-Z]/g;
+// let NotatoZCoptial = /[^A-Z]/g;
+// let AndBAndC = /[ace]/g;
+// let NotAndBAndC = /[^ace]/g;
+// let LetterCaptialAndSmall = /[a-zA-Z]/g;
+// let numsAndSpcial = /[^a-zA-Z]/g;
+// let specials = /[^a-zA-Z0-9]/g;
+// console.log(myString.match(atozSmall));
+// console.log(myString.match(NotAtoZSmall));
+// console.log(myString.match(atoZCoptial));
+// console.log(myString.match(AndBAndC));
+// console.log(myString.match(NotAndBAndC));
+// console.log(myString.match(LetterCaptialAndSmall));
+// console.log(myString.match(numsAndSpcial));
+// console.log(myString.match(specials));
+// [==========================={EPsode[138]}=================]
+// [Regular Expression
+// Character Classes
+// .  => matches any Character , except newline or other line terminators
+// \w => matches word characters. [a-z,A-Z,0-9 And Underscore]
+// \w => matches Non word character
+// \d => match digits from 0-9
+// \D => match non-digit characters
+// \s => matches whitespace character
+// \S => matches non whitespace character
+// (RegExp - Character Classes Part 1)
+
+// let email =  'O@@@@g...com  O@g.net A@Y.com O-g.com o@s.org 1@1.com';
+// let dot   = /./g;
+// let word  = /\w/g;
+// let valid = /\w@\w.(com|net)/g;
+// console.log(email.match(dot));
+// console.log(email.match(word));
+// console.log(email.match(valid));
+// [==========================={EPsode[139]}=================]
+// Regular Expression
+// RegExp-Character Classes Part 2
+// Character Classes
+// \b => matches at the beginning or end of a word
+// \B => matches Not at the beginning/end of a word
+// Test Method
+// pattern.test(input)
+
+// let names ="sayad 1Spam 2Spam 35Spam Spam4 spam5  Osama Ahomed  Aspam";
+
+// let re = /(\bspam|spam\b)/ig;
+// console.log(names.match(re));
+
+// console.log(/(\bspam|spam\b)/ig.test("Oasam"));
+// console.log(/(\bspam|spam\b)/ig.test("1Spam"));
+// console.log(/(\bspam|spam\b)/ig.test("Spam1"));
+// [==========================={EPsode[140]}=================]
+// let mails = "o@nn.sa osama@gmail.com elzero@gmail.net osama@mail.ru";//All Emails
+// let mailsRe = /\w+@\w+.\w+/ig;
+// console.log(mails.match(mailsRe));
+// let nums ="0110 10 150 05120 0560 350 00";//0 Numbers Or No
+// let numsRe = /0\d*0/ig;
+// console.log(nums.match(numsRe));
+// let urls ="https://google.com http://www.website.net web.com";//http + https
+// let urlsRe = /https?:\/\/(www.)?\w+.\w+/ig;
+// console.log(urls.match(urlsRe));
+
+// [==========================={EPsode[141]}=================]
+
+// Regular Expression
+// Quantifiers
+// n{X}     => Number Of
+// n{X,Y}   => Range
+// n{X}     => At Least X
+
+// let serials = "S100S S3000S S50000S S950000S";
+
+// console.log(serials.match(/s\d{3}s/ig)); //S[Three Number]S
+// console.log(serials.match(/s\d{4,5}s/ig)); //S[Four Or Five Number]S
+// console.log(serials.match(/s\d{4,}s/ig)); //S[At Least Four Number]S
+
+// [==========================={EPsode[142]}=================]
+// Regular Expression
+// Quantifiers
+// $   => End With Something
+// ^   => Start With Something
+// ?=  => Followed By Something
+// ?!  => Not Followed By Something
+
+// let myString = "We Love Programing";
+// let names = "1Osamaz 2AhmedZ 3Mohammed 4MoustafaZ 5GamalZ";
+
+// console.log(/ing$/ig.test(myString));
+// console.log(/^we/ig.test(myString));
+// console.log(/lz$/ig.test(myString));
+// console.log(/^\d/ig.test(myString));
+
+// console.log(names.match(/\d\w{5}(?=Z)/ig));
+// console.log(names.match(/\d\w{8}(?!Z)/ig));
+
+// [==========================={EPsode[143]}=================]
+// [Regular Expression
+// --rplace
+// --replaceAll
+// ]
+// let txt = "We Love Programing And @ Because @ Is Amazing";
+
+// console.log(txt.replace("@","JavaScript"));
+// console.log(txt.replaceAll("@","JavaScript"));
+// let re = /@/ig;
+// console.log(txt.replaceAll(re,"JavaScript"));
+// console.log(txt.replaceAll(/@/ig,"JavaScript"));
+
+// [==========================={EPsode[144]}=================]
+// Regular Expression
+// ---Input form Validation Practice
+// document.getElementById("register").onsubmit = function () {
+//     let phoneInput = document.getElementById("phone").value;
+//     let phoneRe = /\(\d{4}\)\s\d{3}-\d{4}/;
+//     let Validation = phoneRe.test(phoneInput);
+
+//  if(Validation === false){
+//     return false;
+//  }
+//     return true;
+// }
+// [==========================={EPsode[145]}=================]
+
+// Digital Fortress || https://www.regexplib.com/  =>موقع يعطي RegExpress
+// Unitiented Pattern ||  https://regex101.com/    =>يختبار موقع RegExpress
+// [==========================={EPsode[146]}=================]
+// Regular Expression
+// ---Challenge
+// let urlsRe = /https?:\/\/(www.)?\w+.\w+/ig;
+
+// let url1 = 'elzero.org';
+// let url2 = 'http://elzero.org';
+// let url3 = 'https://elzero.org';
+// let url4 = 'https://www.elzero.org';
+// let url5 = 'https://www.elzero.org:8080/articles.php?id=100&cat=topics';
+
+// // let re = /https?:\/\/(www. |)?\w+.\W+.\w+./ig;
+// let re = /.+/ig;
+// console.log(url1.match(re));
+// console.log(url2.match(re));
+// console.log(url3.match(re));
+// console.log(url4.match(re));
+// console.log(url5.match(re));
+
+// [==========================={EPsode[147]}=================]
+//OOP Introduction
+// [==========================={EPsode[148]}=================]
+// Constructor Function
+
+// function User(id, username, salary) {
+//   this.i = id;
+//   this.u = username;
+//   this.s = salary;
+// };
+
+// let userOne = new User(100 , "abboud", 5000);
+// let userTwo = new User(101 , "qasem", 6000);
+// let userThree = new User(102 , "hatem", 7000);
+
+// console.log(userOne.i);
+// console.log(userOne.u);
+// console.log(userOne.s);
+
+// console.log("#".repeat(20));
+// console.log(userTwo.i);
+// console.log(userTwo.u);
+// console.log(userTwo.s);
+
+// console.log("#".repeat(20));
+
+// console.log(userThree.i);
+// console.log(userThree.u);
+// console.log(userThree.s);
+
+
+// const userOne = {
+//   id: 100,
+//   username: "abboud",
+//   salary: 5000,
+// };
+// const userTwo = {
+//   id: 101,
+//   username: "Qasem",
+//   salary: 5000,
+// };
+// const userThree = {
+//   id: 102,
+//   username: "Hatem",
+//   salary: 5000,
+// };
+// [==========================={EPsode[149]}=================]
+
+// Constructor Function 
+// --New Syntax
+
+// class User {
+//     constructor(id, username, salary) {
+//         this.i = id;
+//         this.u = username;
+//         this.s = salary;
+//     }
+// };
+
+// let userOne = new User(100 , "abboud", 5000);
+
+
+// console.log(userOne.i);
+// console.log(userOne.u);
+// console.log(userOne.s);
+
+// console.log("#".repeat(20));
+
+
+// console.log(userOne instanceof  User);
+// console.log(userOne.constructor === User);
+// [==========================={EPsode[150]}=================]
+// Constructor Function
+// ---Deal With Properties
+// class User {
+//     constructor(id, username, salary) {
+//         this.i = id;
+//         this.u = username || "Unknow";
+//         this.s = salary < 500 ? salary + 500 : salary;
+//         this.msg = function (){
+//             return `Hello ${this.u} Your Salar Is : ${this.s}`;
+//         }
+//     }
+//     //Methods 
+//     writeMsge (){
+//                     return `Hello ${this.u} Your Salar Is : ${this.s}`;
+
+//     }
+// };
+
+// let userOne = new User(100 , "abboud", 5000);
+// let userTwo = new User(100 , "abboud", 5000);
+
+// console.log(`\n Id  :  ${userOne.i} 
+//              Name   :  ${userOne.u}
+//              Salary : ${userOne.s}
+//              Massage : ${userOne.msg()}
+//              Massage : ${userOne.writeMsge()}`);
+
+// console.log("#".repeat(20));
+// console.log(`             Id     :  ${userTwo.i}
+//             Name   :  ${userTwo.u}
+//              Salary :  ${userTwo.s}
+//              Massage:  ${userTwo.msg} 
+//               Massage:  ${userTwo.writeMsge}`);//msg and writeMsge are  Native Code 
+// [==========================={EPsode[151]}=================]
+
+
