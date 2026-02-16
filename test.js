@@ -3228,4 +3228,262 @@ SubString : substring(Start [Required],End [Optional])
 //               Massage:  ${userTwo.writeMsge}`);//msg and writeMsge are  Native Code 
 // [==========================={EPsode[151]}=================]
 
+// [==========================={EPsode[152]}=================]
+// Class
+// --Static Properties And MethodsClass
+// --Static Properties And Methods
+
+// class User {
+//     // Static Proper
+//     static count  = 0 ;
+//   constructor(id, username, salary) {
+//     this.i = id;
+//     this.u = username;
+//     this.s = salary;
+//     User.count++;
+//   }
+//   static sayHello() {
+// return  ` Hello From Class`;
+//   }
+//   static  countMembers() {
+//     return `${this.count} Members Count`;
+//   }
+// }
+// let userOne = new User(100, "abboud", 5000);
+// let userTwo = new User(101, "Ahomed", 5000);
+// let userThree = new User(102, "Saad", 5000);
+
+// console.log(userOne.u);
+// console.log(userTwo.u);
+// console.log(userOne.count);
+// console.log(userOne.u);
+// console.log(User.sayHello())
+// console.log(User.count);
+// console.log(User.countMembers());
+
+// [==========================={EPsode[153]}=================]
+// Class
+// ---Inheritance
+// Parent Class
+// class User {
+//   // Static Proper
+
+//   constructor(id, username) {
+//     this.i = id;
+//     this.u = username;
+
+//   }
+//   sayHello() {
+//     return ` Hello From Class ${this.u}`;
+//   }
+// }
+
+// // Derived Class
+// // مستند خصائص من الكلاس الاخري
+// class Admin extends User{
+//   constructor(id, username, premission) {
+//  super(id , username );
+//     this.p = premission;
+//   }
+
+// }
+// class SuperMain  extends  Admin {
+//     constructor(id , username , premission , ability){
+//         super(id , username , premission );
+//         this.p = premission;
+//     }
+
+// }
+
+// let userOne = new User(100, "abboud", 5000);
+// let adminOne =  new Admin(110, "Mahmoud",1);
+
+// console.log(userOne.u);
+// console.log(userOne.sayHello());
+
+// console.log("#######");
+
+// console.log(adminOne.i);
+// console.log(adminOne.u);
+// console.log(adminOne.p);
+// console.log(adminOne.sayHello());
+
+// [==========================={EPsode[154]}=================]
+/* Class Encapsulation
+---Class Field Are Public By Default 
+---Guards The Data Against Illagal Access 
+---Helps To Achieve The Target WithOut Revealing Its Complex Details 
+---Will Reduce Human Flexible And Manageable 
+---Simplifies The App 
+*/
+
+// class User {
+// //   Private Perperty
+// #e ;
+
+//   constructor(id, username , eSalary) {
+//     this.i  = id;
+//     this.u  = username;
+//     this.#e = eSalary;
+//   }
+//   getSalary (){
+//     return  parseInt(this.#e);
+//   }
+// }
+
+// let userOne = new User(100, "abboud", "5000 Gneh");
+
+// console.log(userOne.u);
+//  console.log(userOne.getSalary()  * 0.3 );
+
+// [==========================={EPsode[155]}=================]
+// Prototype
+//  ---Introduction
+// ---Prototypes are the mechanism by JavaScript Objects
+// ---inhert Features From one another
+
+// class User {
+// //   Private Perperty
+
+//   constructor(id, username ) {
+//     this.i  = id;
+//     this.u  = username;
+
+//   }
+//   sayHello(){
+//     return   `Hello ${this.u}`;
+//   }
+// }
+
+// let userOne = new User(100, "abboud");
+
+// console.log(userOne.u);
+
+// console.log(User.prototype);
+
+// let strOne = "Elzero";
+
+// console.log(String.prototype);
+// [==========================={EPsode[156]}=================]
+// Prototype
+// ---Add To Prototype Chain
+// ---Extend Bulit In Constrructors Features
+
+// class User {
+// //   Private Perperty
+
+//   constructor(id, username ) {
+//     this.i  = id;
+//     this.u  = username;
+
+//   }
+//   sayHello(){
+//     return   `Hello ${this.u}`;
+//   }
+// }
+
+// let userOne = new User(100, "abboud");
+
+// console.log(userOne.u);
+// console.log(User.prototype);
+// console.log(userOne)
+
+// User.prototype.sayWelcome = function (){
+//     return `Welcome ${this.u}`;
+// };
+
+// Object.prototype.love = "Elzero Web School";
+
+// String.prototype.addDotBeforeAndAfter = function (val){
+//     return `.${this}.`;
+// }
+
+// let myString = "Elzero";
+// [==========================={EPsode[157]}=================]
+// Object Meta Data  And Descriptor
+// ---Writable
+// ---enumerable
+// ---Configural [Cannot Delete Or Reconfigure
+
+// const myObject = {
+//     a: 1,
+//     b: 2
+// };
+
+// Object.defineProperty(myObject, "c",{
+//     writable: false,
+//     enumerable: true ,
+//     configurable: true,
+//     value: 3 ,
+// });
+
+// myObject.c = 100 ;
+
+// console.log(delete myObject.c);
+
+// for(let prop in myObject){
+//     console.log(prop , myObject[prop]);
+// }
+// console.log(myObject);
+
+// console.log(myObject);
+// [==========================={EPsode[158]}=================]
+// const myObject = {
+//     a: 1,
+//     b: 2
+// };
+
+// Object.defineProperties(myObject ,{
+//     c:{
+//         configurable:true ,
+//         value: 3,
+//     },
+//      d:{
+//         configurable:true ,
+//         value: 4,
+//     },
+//      e:{
+//         configurable:true ,
+//         value: 5,
+//     },
+// });
+
+// console.log(Object.getOwnPropertyDescriptor(myObject,"d"));
+// console.log(Object.getOwnPropertyDescriptors(myObject));
+// [==========================={EPsode[159]}=================]
+// [Data And Time
+// ---Data Constructor
+// --Static Methods
+// ---Data.now()
+// --To Track Time You Need Starting Point
+// --Epoch Time Or Unix Time In Computer Science Is The Number Of Seconds Since January 1,1970.
+// --Why 1970 [829 Days To 136 Years]
+// Search For
+// Year 2038 Propblem in Computer Science
+// https://www.timeanddate.com/ =>.[website For Time]
+// ]
+
+// let dateNow =  new Date();
+
+// console.log(dateNow);
+// console.log(Date.now());//1000 Mill = 1 Second
+
+// let seconds = Date.now() / 1000 ;//Number Of Second
+
+// console.log(`The Seconds : ${seconds}`);
+
+// let minutes = seconds / 60 ;
+
+// console.log(`The Minutes  : ${minutes}`);//Number Of Minutes
+
+// let hour = minutes / 60 ;
+
+// console.log(`The Hour  : ${hour}`);//Number Of Hours
+
+// let days = minutes / 24 ;
+// console.log(`The days  : ${days}`);//Number Of Minutes
+
+// let years = days / 136;
+// console.log(`The Yaers   : ${years}`);//Number Of Minutes
+
 

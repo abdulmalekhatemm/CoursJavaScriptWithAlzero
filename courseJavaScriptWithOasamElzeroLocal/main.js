@@ -2307,7 +2307,6 @@
 // console.log(userThree.u);
 // console.log(userThree.s);
 
-
 // const userOne = {
 //   id: 100,
 //   username: "abboud",
@@ -2325,7 +2324,7 @@
 // };
 // [==========================={EPsode[149]}=================]
 
-// Constructor Function 
+// Constructor Function
 // --New Syntax
 
 // class User {
@@ -2338,13 +2337,11 @@
 
 // let userOne = new User(100 , "abboud", 5000);
 
-
 // console.log(userOne.i);
 // console.log(userOne.u);
 // console.log(userOne.s);
 
 // console.log("#".repeat(20));
-
 
 // console.log(userOne instanceof  User);
 // console.log(userOne.constructor === User);
@@ -2360,7 +2357,7 @@
 //             return `Hello ${this.u} Your Salar Is : ${this.s}`;
 //         }
 //     }
-//     //Methods 
+//     //Methods
 //     writeMsge (){
 //                     return `Hello ${this.u} Your Salar Is : ${this.s}`;
 
@@ -2370,7 +2367,7 @@
 // let userOne = new User(100 , "abboud", 5000);
 // let userTwo = new User(100 , "abboud", 5000);
 
-// console.log(`\n Id  :  ${userOne.i} 
+// console.log(`\n Id  :  ${userOne.i}
 //              Name   :  ${userOne.u}
 //              Salary : ${userOne.s}
 //              Massage : ${userOne.msg()}
@@ -2380,8 +2377,1112 @@
 // console.log(`             Id     :  ${userTwo.i}
 //             Name   :  ${userTwo.u}
 //              Salary :  ${userTwo.s}
-//              Massage:  ${userTwo.msg} 
-//               Massage:  ${userTwo.writeMsge}`);//msg and writeMsge are  Native Code 
+//              Massage:  ${userTwo.msg}
+//               Massage:  ${userTwo.writeMsge}`);//msg and writeMsge are  Native Code
 // [==========================={EPsode[151]}=================]
 
+// Constructor Function
+// --Updata Properties
+// --Bulit In Constructors
+// class User {
+//     constructor(id, username, salary) {
+//         this.i = id;
+//         this.u = username ;
+//         this.s = salary;
 
+//     }
+//     updataUser (newUser){
+//         this.u = newUser ;
+
+//     }
+
+// }
+//     let userOne = new User(100, "abboud", 5000);
+
+//     console.log(userOne.u);
+//      userOne.updataUser("Qasem")
+//         console.log(userOne.u)
+//  let strOne = "Elzero";
+//  let StrTwo = new String("Elzero");
+
+// console.log(typeof strOne); //false
+// console.log(typeof StrTwo);//true
+
+//    console.log(strOne instanceof String )
+//    console.log(StrTwo instanceof String )
+
+// console.log(strOne.constructor === String );//True
+// console.log(StrTwo.constructor === String );//True
+
+// [==========================={EPsode[152]}=================]
+// Class
+// --Static Properties And MethodsClass
+// --Static Properties And Methods
+
+// class User {
+//     // Static Proper
+//     static count  = 0 ;
+//   constructor(id, username, salary) {
+//     this.i = id;
+//     this.u = username;
+//     this.s = salary;
+//     User.count++;
+//   }
+//   static sayHello() {
+// return  ` Hello From Class`;
+//   }
+//   static  countMembers() {
+//     return `${this.count} Members Count`;
+//   }
+// }
+// let userOne = new User(100, "abboud", 5000);
+// let userTwo = new User(101, "Ahomed", 5000);
+// let userThree = new User(102, "Saad", 5000);
+
+// console.log(userOne.u);
+// console.log(userTwo.u);
+// console.log(userOne.count);
+// console.log(userOne.u);
+// console.log(User.sayHello())
+// console.log(User.count);
+// console.log(User.countMembers());
+
+// [==========================={EPsode[153]}=================]
+// Class
+// ---Inheritance
+// Parent Class
+// class User {
+//   // Static Proper
+
+//   constructor(id, username) {
+//     this.i = id;
+//     this.u = username;
+
+//   }
+//   sayHello() {
+//     return ` Hello From Class ${this.u}`;
+//   }
+// }
+
+// // Derived Class
+// // مستند خصائص من الكلاس الاخري
+// class Admin extends User{
+//   constructor(id, username, premission) {
+//  super(id , username );
+//     this.p = premission;
+//   }
+
+// }
+// class SuperMain  extends  Admin {
+//     constructor(id , username , premission , ability){
+//         super(id , username , premission );
+//         this.p = premission;
+//     }
+
+// }
+
+// let userOne = new User(100, "abboud", 5000);
+// let adminOne =  new Admin(110, "Mahmoud",1);
+
+// console.log(userOne.u);
+// console.log(userOne.sayHello());
+
+// console.log("#######");
+
+// console.log(adminOne.i);
+// console.log(adminOne.u);
+// console.log(adminOne.p);
+// console.log(adminOne.sayHello());
+
+// [==========================={EPsode[154]}=================]
+/* Class Encapsulation
+---Class Field Are Public By Default 
+---Guards The Data Against Illagal Access 
+---Helps To Achieve The Target WithOut Revealing Its Complex Details 
+---Will Reduce Human Flexible And Manageable 
+---Simplifies The App 
+*/
+
+// class User {
+// //   Private Perperty
+// #e ;
+
+//   constructor(id, username , eSalary) {
+//     this.i  = id;
+//     this.u  = username;
+//     this.#e = eSalary;
+//   }
+//   getSalary (){
+//     return  parseInt(this.#e);
+//   }
+// }
+
+// let userOne = new User(100, "abboud", "5000 Gneh");
+
+// console.log(userOne.u);
+//  console.log(userOne.getSalary()  * 0.3 );
+
+// [==========================={EPsode[155]}=================]
+// Prototype
+//  ---Introduction
+// ---Prototypes are the mechanism by JavaScript Objects
+// ---inhert Features From one another
+
+// class User {
+// //   Private Perperty
+
+//   constructor(id, username ) {
+//     this.i  = id;
+//     this.u  = username;
+
+//   }
+//   sayHello(){
+//     return   `Hello ${this.u}`;
+//   }
+// }
+
+// let userOne = new User(100, "abboud");
+
+// console.log(userOne.u);
+
+// console.log(User.prototype);
+
+// let strOne = "Elzero";
+
+// console.log(String.prototype);
+// [==========================={EPsode[156]}=================]
+// Prototype
+// ---Add To Prototype Chain
+// ---Extend Bulit In Constrructors Features
+
+// class User {
+// //   Private Perperty
+
+//   constructor(id, username ) {
+//     this.i  = id;
+//     this.u  = username;
+
+//   }
+//   sayHello(){
+//     return   `Hello ${this.u}`;
+//   }
+// }
+
+// let userOne = new User(100, "abboud");
+
+// console.log(userOne.u);
+// console.log(User.prototype);
+// console.log(userOne)
+
+// User.prototype.sayWelcome = function (){
+//     return `Welcome ${this.u}`;
+// };
+
+// Object.prototype.love = "Elzero Web School";
+
+// String.prototype.addDotBeforeAndAfter = function (val){
+//     return `.${this}.`;
+// }
+
+// let myString = "Elzero";
+// [==========================={EPsode[157]}=================]
+// Object Meta Data  And Descriptor
+// ---Writable
+// ---enumerable
+// ---Configural [Cannot Delete Or Reconfigure
+
+// const myObject = {
+//     a: 1,
+//     b: 2
+// };
+
+// Object.defineProperty(myObject, "c",{
+//     writable: false,
+//     enumerable: true ,
+//     configurable: true,
+//     value: 3 ,
+// });
+
+// myObject.c = 100 ;
+
+// console.log(delete myObject.c);
+
+// for(let prop in myObject){
+//     console.log(prop , myObject[prop]);
+// }
+// console.log(myObject);
+
+// console.log(myObject);
+// [==========================={EPsode[158]}=================]
+// const myObject = {
+//     a: 1,
+//     b: 2
+// };
+
+// Object.defineProperties(myObject ,{
+//     c:{
+//         configurable:true ,
+//         value: 3,
+//     },
+//      d:{
+//         configurable:true ,
+//         value: 4,
+//     },
+//      e:{
+//         configurable:true ,
+//         value: 5,
+//     },
+// });
+
+// console.log(Object.getOwnPropertyDescriptor(myObject,"d"));
+// console.log(Object.getOwnPropertyDescriptors(myObject));
+// [==========================={EPsode[159]}=================]
+// [Data And Time
+// ---Data Constructor
+// --Static Methods
+// ---Data.now()
+// --To Track Time You Need Starting Point
+// --Epoch Time Or Unix Time In Computer Science Is The Number Of Seconds Since January 1,1970.
+// --Why 1970 [829 Days To 136 Years]
+// Search For
+// Year 2038 Propblem in Computer Science
+// https://www.timeanddate.com/ =>.[website For Time]
+// ]
+
+// let dateNow =  new Date();
+
+// console.log(dateNow);
+// console.log(Date.now());//1000 Mill = 1 Second
+
+// let seconds = Date.now() / 1000 ;//Number Of Second
+
+// console.log(`The Seconds : ${seconds}`);
+
+// let minutes = seconds / 60 ;
+
+// console.log(`The Minutes  : ${minutes}`);//Number Of Minutes
+
+// let hour = minutes / 60 ;
+
+// console.log(`The Hour  : ${hour}`);//Number Of Hours
+
+// let days = minutes / 24 ;
+// console.log(`The days  : ${days}`);//Number Of Minutes
+
+// let years = days / 136;
+// console.log(`The Yaers   : ${years}`);//Number Of Minutes
+// [==========================={EPsode[160]}=================]
+// [Data And Time
+// ---getTime() =>Number Of MilliSeconds
+// ---getDate()  => Day Of The Month
+// ---getFullYear()
+// ---getMonth()=>  Zero Based
+// ---getDay() => Day Of The Week
+// ---getHours()
+// ---getMinutes()
+// ---getSeconds() ]
+
+// let dateNow =  new Date();
+// let birthday = new Date("oct 20, 82");
+// let dateDiff = dateNow - birthday;
+
+// console.log(dateDiff);
+
+// console.log(dateDiff / 1000 / 60 / 60 / 24 / 365);
+
+// console.log(dateNow);
+
+// console.log(dateNow.getTime( ));
+// console.log(dateNow.getDate( ));
+// console.log(dateNow.getFullYear( ));
+// console.log(dateNow.getMonth( ));
+// console.log(dateNow.getDay( ));
+// console.log(dateNow.getHours( ));
+// console.log(dateNow.getMinutes( ));
+// console.log(dateNow.getSeconds( ));
+
+// [==========================={EPsode[161]}=================]
+// [Date And Date
+// ---setTime(Milliseconds)
+// ---setDate()=> Day of The Month [Negative And Positive
+// ---setFullYear(year,month => Optional [0-11],day => Optional [1-31)
+// ---setMonth(Month [0-11) , Day => Optional [1-31] [Negative And Positive]
+// ---setHours(Hours [0-23],Minutes => Optional [0-59] , Ms => Optional [0-999])
+// ---setMinutes(Minutes [0-59] ,MS  => Optional  [0-999])
+// ---setSeconds(Seconds => [0-59], MS =>Optional [0-999] ]
+
+// let dateNow = new Date();
+// console.log(dateNow);
+
+// console.log("#".repeat(50));
+
+// dateNow.setTime(0);
+// console.log(dateNow);
+
+// console.log("#".repeat(66));
+
+// dateNow.setTime(1000);
+// console.log(dateNow);
+
+// console.log("#".repeat(66));
+
+// dateNow.setDate(35);
+// console.log(dateNow);
+
+// dateNow.setDate(2020 ,13);
+// console.log(dateNow);
+
+// dateNow.setMonth(15);
+// console.log(dateNow);
+// [==========================={EPsode[162]}=================]
+// Formatting Date And Time
+// --new Date(timestamp)
+// --new Date(Date String)
+// --new Date(Numeric Values )
+// ---Format
+// --"Oct 25 1982"
+// --"10/25/1982"
+// --"1982-10-25" =>ISO International Standard
+// --"1982 10"
+// --"1982"
+// --"82"
+// --1982,9,25,2,10,0
+// --1983,9,25
+// --"1982-10-25T06:10:00Z
+// Date.parse("String") //Read Date Form A String
+// console.log(Date.parse("Oct 25 1982"));
+
+// let date1 = new Date(0);
+// console.log(date1);
+
+// let date2 = new Date(404341200000);
+// console.log(date2);
+
+// let date3 = new Date("10/25/1982");
+// console.log(date3);
+
+// let date5 = new Date("1982-10-25");
+// console.log(date5);
+
+// let date6 = new Date("1982-10" );
+// console.log(date6);
+
+// let date7 = new Date("82");
+// console.log(date7);
+
+// let date8 = new Date(1982,9,25,2,10,0);
+// console.log(date8);
+
+// let date9 = new Date("1982-10-25T06:10:00Z");
+// console.log(date9);
+
+// [==========================={EPsode[163]}=================]
+
+// [Date And Time
+// ---Track Operations Time
+
+// --Search
+// ---Performance.now()
+// ---Performance.mark()]
+
+// Start Time
+// let start = new Date();
+
+// // Operation
+// for(let i = 0; i< 100000;i++){
+//    let div = document.createElement(`<div>`);
+//     div.appendChild(document.createTextNode(i));
+//     document.body.appendChild(div);
+// }
+
+// //Time End
+// let end  = new Date();
+
+// // Operation Duration
+// let duration = end - start ;
+
+// console.log(duration);
+// [==========================={EPsode[164]}=================]
+// [Generators
+// --Generator Function Run Its Code When Required.
+// --Generator Function Return Spacial Object [Generator Object]
+// --Generators Are Iterable ]
+
+// function* generateNumbers() {
+//     yield 1;
+//     console.log("Hello After Yield 1");
+//     yield 2;
+//     yield 3;
+//     yield 4;
+//     yield 5;
+// };
+
+// let generetor = generateNumbers();
+
+// console.log(typeof generetor);
+// console.log(generetor);
+
+// console.log(generetor.next());
+// console.log(generetor.next());
+// console.log(generetor.next());
+// console.log(generetor.next());
+// console.log(generetor.next());
+// console.log(generetor.next());
+
+// for(let value of generateNumbers()){
+//     console.log(value);
+// }
+
+// for(let value of generetor){
+//     console.log(value);
+// }
+
+// function* test(){
+//   yield 1;
+//   return 10;
+// }
+
+// let g = test();
+
+// console.log(g.next());
+// console.log(g.next());
+
+// [==========================={EPsode[165]}=================]
+// Generators
+// ---Delegate Generator
+
+// function* generateNums() {
+//     yield 1;
+//     yield 2;
+//     yield 3;
+// };
+
+// function* generateLetters (){
+//     yield "A";
+//       yield "B";
+//         yield "C";
+// }
+
+// function* generateAll(){
+//     yield* generateNums();
+//     yield* generateLetters();
+//     yield* [4,5,6];
+// };
+
+// let generator = generateAll();
+
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+
+// [==========================={EPsode[166]}=================]
+// Generators
+// --Generate Infinite Numbers
+// --Use Return Inside Generators
+// function* generateNumbers(){
+//     // yield 1;
+//     // yield 2;
+//     // return "A";
+//     // yield 3;
+//     // yield 4;
+//     let index  = 0;
+
+//     while(true){
+//         yield index++;
+//     }
+// };
+
+// let generate = generateNumbers();
+
+// console.log(generate.next());
+// console.log(generate.next());
+// console.log(generate.next());
+// console.log(generate.next());
+
+// [==========================={EPsode[167-168]}=================]
+// Models (وحدة برمجة بنتفذ وظفية معينة )
+// --Import And Export ]
+
+//  let a = 10;
+//  let arr = [1, 2, 3];
+//  function saySomething() {
+//   return `Something in main.js File `;
+// }
+// export {a , arr , saySomething };
+
+// export default function sayHello() {
+//   return  `Hello say Hi`
+// }
+// [==========================={EPsode[169-170-171]}=================]
+// [What is JSON ?
+// ---JavaScript Object Notation
+// ---Format For Sharing Data Between Server And Client
+// ---JSON Derived Form JavaScript
+// ---Alternative To XML
+// ---File Extension Is .json
+// Why JSON ?
+// ---Easy To Use And Read
+// ---Used By Most Programing Language And Its Frameworks
+// --You Can Convert JSON Object To JS Object And Vice  Versa
+
+// JSON vs XML
+// ===================================================
+// ==Text Based Format        = Markup Language
+// ==Lightweight              = Heavier
+// ==Does Not Use Tages       = Using Tags
+// ==Shorter                  = Not Short
+// ==Can Use Arrays           = Canot Use Arrays
+// ==Not Support Comments     = Support Comments
+// ===================================================
+// ]
+
+// [==========================={EPsode[172]}=================]
+
+// [Parse And Stringify
+// --JSON.parse  => Convert Text Data To JS Object
+// --JSON.stringify => Convert JS Object TO JSON ]
+
+// const myJsonObjectFromServer = '{"Username":"Osama","Age":39}';
+// console.log(typeof  myJsonObjectFromServer);
+// console.log(myJsonObjectFromServer);
+
+// const myJsObject = JSON.parse(myJsonObjectFromServer);
+// console.log(typeof myJsObject);
+// console.log(myJsObject);
+
+// myJsObject["Username"] = "Elzero";
+// myJsObject["Age"]  = 40 ;
+
+// const myJsonObjectToServer =  JSON.stringify(myJsObject);
+// console.log(typeof  myJsonObjectToServer);
+// console.log( myJsonObjectToServer);
+
+// [==========================={EPsode[173]}=================]
+// [To Understand Ajax . Fetch ,Promises
+// Asynchronous vs Synchronous Programing
+// --Meaning
+// ------Synchronous (متزامن يتم تنفيذ العمليات بشكل متسلسل واحدة بعد واحدة )
+// --operations Runs in Sequence
+// --Each Operation Must Wait For The Previous One To Complete
+// --Story From Real Life
+// ------Asynchronous (متزامن غير  يمكن تنفذ عمليات اخري بين العملية يتم معالج العملية  )
+// --Operations Runs In Parallel
+// --This Means That An Operation Can Occur Another One Is Still Being Processed
+// --Story From Real Life
+
+// --Facebook As Example
+// --Simulation
+// ------Search
+// --JavaScript Is A Single-Threaded
+// --Multi Threaded Languages
+// ]
+
+// Synchronous
+// console.log("1");
+// console.log("2");
+// console.log("3");
+// window.alert(" Synchronous");
+// console.log("4");
+
+// Asynchronous
+
+// console.log("1");
+// console.log("2");
+// console.log("3");
+// window.setTimeout(()=> console.log(" Asynchronous") ,3000);
+// console.log("4");
+
+// [==========================={EPsode[174]}=================]
+// [To Understand Ajax, Fetch ,Promises
+// --Call Stack || Stack Trace
+// ----JavaScript Engine Use A Call Stack To Manange Execution Contexts
+// ----Mechanism To Make The Interpreter Track Your Calls
+// ----When Function Called It Added To The Stack
+// ----When Function Executed It Removed From Stack
+// ----After Function Is Finished Exceuting The Interpreter Containue From The Last Point
+// ----Work Using LIFO Principle =>Last In First Out
+// ----Call Stack Detect Web API Methods  And Level It To The Browser To Handle It
+
+// Web API
+// ----Methods Available From The Environment => Browser]
+
+// setTimeout(()=>{
+//   console.log("Wbe API ");
+// }
+// ,0);
+
+// function one() {
+//   console.log("One");
+// }
+// function two() {
+//   one();
+//   console.log("two");
+// }
+// function three() {
+//   two();
+//   console.log("three");
+// }
+
+// three();
+
+// [==========================={EPsode[175]}=================]
+// [To Understand Ajax, Fetch ,Promises
+// Event Loop + callback Queue
+// --Story
+// ---JavaScript Is A Single Threaded Language "All Operations Excuted in Single Thread"
+// ---Call Stack Track AllCalls
+// ---Every Function Is Done Its Poped Out
+// ---When You  Call Asynchrouous Function Its Sent To Browser API
+// ---Asynchrouous Function Like Settimeout Start Its Own Thread
+// ---Browser API Act As A Second Thread
+// ---API Finish Waiting And And Send Back The Function For Processing
+// ---Browser API Add The Callback  To CallBack Queue
+// ---Event Loop Wait For  Call Stack To Be  Empty
+// ---Event Loop Get callback From Callback Queue And It To CAll Stack
+// ---CallBack Queue Follow FIFO "First In First Out" Rule
+// ]
+// console.log("One");
+// window.setTimeout(()=>{
+// console.log("Three");
+// },0);
+// window.setTimeout(()=>{
+// console.log("Four");
+// },0);
+// console.log("Two");
+
+// setTimeout(()=>{
+//     console.log(myVar);
+// },0);
+// let myVar = 100;
+
+// myVar += 100;
+
+// [==========================={EPsode[176]}=================]
+// {[What Is AJAX And Networking Information
+// ===AJAX
+// ---Asynchronous JavaScript And XML
+// ---Approach TO Use Many Technologies [HTML, CSS,JS ,DOM]
+// ---It USe "XMLHtttpRequest" Object To Ineract With The Server
+// ---You  Can Fetch Data Or Send Data Without Page Refresh
+// ----Example
+// ---Youtube Studio
+// ---Google Driver
+// ---Upload Article
+// ---Form Check  Name
+// ---------
+// ---Test new XMLHtttpRequest();
+// ---Request And Response
+// ---Status  Code
+
+// ]
+
+// let req = new XMLHttpRequest();
+
+// console.log(req);
+// [==========================={EPsode[177-178]}=================]
+// [AJAX
+// ---Ready State => Status Of The REquest
+// [0] Request Not Initialized
+// [1] Server Connection Established
+// [2] Request Received
+// [3] Processing Request
+// [4] Request Is Finished And Response Is Ready
+// ----status
+// [200] Response Is Successful
+// [404] Not Found
+// ]
+
+// let req = new XMLHttpRequest();
+// req.open("GET", "https://api.github.com/users/elzerowebschool/repos");
+// req.send();
+// console.log(req);
+
+// req.onreadystatechange = function () {
+//     if ( this.readyState === 4 && this.status === 200 ){
+//         // console.log(this.responseText );
+//         let JsData = JSON.parse(this.responseText);
+
+//         // console.log(JsData);
+//         for (let i = 0 ; i < JsData.length;i++){
+//         let div = document.createElement("div");
+//         let reponame = document.createTextNode(JsData[i].name);
+
+//         div.appendChild(reponame);
+
+//         document.body.appendChild(div);
+//         }
+//     }
+// }
+// [==========================={EPsode[179]}=================]
+//  [To Understand Ajax , Fetch , Promises
+// ---Pyramid Of Doom || Callback Hell
+
+// ---What Is Callback
+// ---CallBack Hell Example
+
+// ---Waht Is Callback
+// ----A Function That Is Passed Into Another One As An Argument To Be Executed Later
+// ----Function To Handle Example
+// -----[1] Download Photo From URL
+// -----[2] Resize Photo
+// -----[3] Add Logo To The Photo
+// -----[4] Show The Photo In WebSite
+// ]
+
+// function makeItRed(e) {
+//   e.target.style.color = "red";
+// }
+
+// document.addEventListener("click", makeItRed);
+
+// // function iamCallBack() {
+// //   console.log("Iam A Callback Function ");
+// // }
+
+// // setTimeout(iamCallBack, 2000);
+
+// setTimeout(() => {
+//   console.log("Download Photo From URL");
+//   setTimeout(() => {
+//     console.log("Resize Photo ");
+//     setTimeout(() => {
+//       console.log("Add Logo To The Photo");
+//       setTimeout(() => {
+//         console.log("Show The Photo In WebSite");
+//       }, 1000);
+//     }, 1000);
+//   }, 1000);
+// }, 1000);
+// [==========================={EPsode[180]}=================]
+
+// [Promise Intro And Syntax
+// ---Promise In JavaScript Is LIke Promise In Real Life
+// ---Promise In JavaScript That Will Happen In The Future
+// ---Promise Avoid callback Hell
+// ---Promise Is The Object That Represent The Status Of An Asynchronous Operation And Resulting  Value
+// ----Promise Status
+// ----Pending: Intitial State
+// ----Fulfilled:Completed Successfully
+// ----Rejected:Failed
+// -----Story
+// ---Once A Promise Has Been Called,It Will Start In A Pending State
+// ---The Created Promise Will Eventually End In A Resolved  State Or Rejected State
+// ---Calling The Callback Function (Passed To Then And Catch )Upon Finishing.
+
+// ---Then
+// ---Take 2 Optional Agrument [callback For Success Or Failure]
+
+//  ]
+// const myPromise = new Promise((resolveFunction , rejectFunction )=>{
+//     let connect = true ;
+// if(connect){
+//     resolveFunction("Connection Established");
+// }else
+// {
+//     console.log(Error("Connection Faild"));
+// }
+// }).then(
+//     (resolValue) => console.log(`Good ${resolValue}`),
+//     (rejectValue) => console.log(`Bad ${rejectValue}`)
+// );
+
+// console.log(myPromise);
+
+// const myPromise = new Promise((resolveFunction, rejectFunction) => {
+//   let connect = true;
+//   if (connect) {
+//     resolveFunction("Connection Established");
+//   } else {
+//     console.log(Error("Connection Faild"));
+//   }
+// });
+
+// console.log(myPromise);
+
+// let resolver = (resolValue) => console.log(`Good ${resolValue}`);
+// let rejector = (rejectValue) => console.log(`Bad ${rejectValue}`);
+// myPromise.then(resolver, rejector);
+
+// myPromise.then(
+//     (resolValue) => console.log(`Good ${resolValue}`),
+//     (rejectValue) => console.log(`Bad ${rejectValue}`)
+// );
+
+// myPromise.then(
+//     (resolValue) => console.log(`Good ${resolValue}`),
+//     (rejectValue) => console.log(`Bad ${rejectValue}`)
+// );
+
+// [==========================={EPsode[181]}=================]
+
+// const myPromise = new Promise((resolveFunction, rejectFunction) => {
+//     let employess =  [];
+
+//     if(employess.length === 4){
+//         resolveFunction(employess);
+//     }
+//     else
+//     {
+//         rejectFunction(Error("Number Of Employees Is Not 4"));
+//     }
+// });
+
+// // myPromise.then(
+// //     (resolValue) => console.log(`Good ${resolValue}`),
+// //     (rejectValue) => console.log(`Bad ${rejectValue}`)
+// // );
+
+// myPromise.then((resolveVlue)=>{
+//     resolveVlue.length = 2 ;
+//     return resolveVlue;
+// });
+
+// myPromise.then((resolveVlue)=>{
+//     resolveVlue.length = 1 ;
+//     return resolveVlue;
+
+// });
+
+// myPromise.then((resolveVlue)=>{
+//   console.log(`The Choosen Employee Is ${resolveVlue}`);
+// }).catch((resloveValue)=>{
+//     console.log(`The Choosen Emplyee Is ${resloveValue}`);
+// }).finally((rejectedReason)=>{
+// console.log("The Operation Is Done ");
+// })
+
+// [==========================={EPsode[182]}=================]
+
+// const getData = (apiLink) => {
+//   return new Promise((reslve, reject) => {
+//     let req = new XMLHttpRequest();
+//     req.onload = function () {
+//       if (this.readyState === 4 && this.status === 200) {
+//         // console.log(this.responseText );
+//         reslve(JSON.parse(this.responseText));
+//       } else {
+//         reject(Error("No Data Found "));
+//       }
+//     };
+//     req.open("GET", apiLink);
+//     req.send();
+//   });
+// };
+
+// getData("https://api.github.com/users/elzerowebschool/repos")
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .then((result) => {
+//     result.length = 10;
+//     return result;
+//   })
+//   .then((result) => console.log(result[0].name))
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// "https://api.github.com/users/elzerowebschool/repos"
+//   let JsData = JSON.parse(this.responseText);
+
+//         // console.log(JsData);
+//         for (let i = 0; i < JsData.length; i++) {
+//           let div = document.createElement("div");
+//           let reponame = document.createTextNode(JsData[i].name);
+
+//           div.appendChild(reponame);
+
+//           document.body.appendChild(div);
+//         }
+//       }
+
+// [==========================={EPsode[183]}=================]
+// fetch("https://api.github.com/users/elzerowebschool/repos")
+//   .then((result) => {
+//     console.log(result);
+//     let myData = result.json();
+//     console.log(myData);
+//     return myData;
+//   })
+//   .then((fullData) => {
+//     fullData.length = 10;
+//     return fullData;
+//   })
+//   .then((printData) => {
+//     console.log(printData[0].name);
+//   });
+
+// [==========================={EPsode[184]}=================]
+// [Promise
+// --All
+// --All Settled
+// --Race ]
+
+// const myFirstPromise = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     res("I am First Promise");
+//   }, 5000);
+// });
+
+// const mySecondPromise = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     res("I am Second Promise");
+//   }, 1000);
+// });
+
+// const myThiPromise = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     res("I am Third Promise");
+//   }, 2000);
+// });
+
+// Promise.all([myFirstPromise, mySecondPromise, myThiPromise]).then(
+//   (resolvedValues) => {
+//     console.log(resolvedValues);
+//   },
+//   (rejectedValues) => console.log(`Rejected Value ${rejectedValues}`),
+// );
+
+// Promise.allSettled([myFirstPromise, mySecondPromise, myThiPromise]).then(
+//   (resolvedValues) => {
+//     console.log(resolvedValues);
+//   },
+//   (rejectedValues) => console.log(`Rejected Value ${rejectedValues}`),
+// );
+
+// Promise.race([myFirstPromise, mySecondPromise, myThiPromise]).then(
+//   (resolvedValues) => {
+//     console.log(resolvedValues);
+//   },
+//   (rejectedValues) => console.log(`Rejected Value ${rejectedValues}`),
+// );
+
+// [==========================={EPsode[185]}=================]
+// [Async And Trainings
+// --Async Before Function Mean This Function Return A Promise
+// --Async And Adwait Help In Creating Asynchronous Promise Behavior With
+// // Cleaner Style  ]
+// function getData(){
+//     return  new Promise((res , rej)=>{
+//         let users = ["abboud"];
+//         if(users.length > 0){
+//         res("Users Found");
+//         }else
+//         {
+//            rej ("No Users Found ");
+//         }
+
+//     });
+// }
+// getData().then(
+//     (reslovedValue)=> console.log(reslovedValue),
+//     (rejectedValue)=> console.log("Rejected : "+ rejectedValue)
+// );
+
+// function getData(){
+
+//         let users = ["abboud"];
+//         if(users.length > 0){
+//     return Promise.resolve("Users Found");
+//         }else
+//         {
+//       return Promise.reject("Not Users Found");
+//         }
+
+//     }
+
+// getData().then(
+//     (reslovedValue)=> console.log(reslovedValue),
+//     (rejectedValue)=> console.log("Rejected : "+ rejectedValue)
+// );
+
+// async function getData() {
+//   let users = ["abboud"];
+//   if (users.length > 0) {
+//     return "Users Found";
+//   } else {
+//     throw new Error("Not Users Found");
+//   }
+// }
+// console.log(getData());
+// getData().then(
+//   (reslovedValue) => console.log(reslovedValue),
+//   (rejectedValue) => console.log("Rejected : " + rejectedValue),
+// );
+
+// [==========================={EPsode[186]}=================]
+// [Await And Triainings
+// --Await Works Only Inside Async Function
+// --Await Make JavaScript Wait For The Proise Result
+// --Await Is More Flegant Syntax Of Getting Promise Resulit
+//  ]
+
+// const myPromise = new Promise ((resvloe , reject)=>{
+//     setTimeout(()=>{
+//         // resvloe("I am Good Promise ");
+//         reject(Error("I am The Bad Promise "));
+//     },3000)
+// });
+
+// async function readData(){
+//     console.log("Before Promise");
+//     //  myPromise.then((resvloedValue)=> console.log(resvloedValue));
+//     // console.log( await myPromise );
+//        console.log( await myPromise.catch((err)=> err) );
+//     console.log("After Promise");
+// }
+
+// readData();
+// [==========================={EPsode[187]}=================]
+// [Try , Catch , Finally  With Fetch
+//  Async & Await With Try , Catch , Finally ]
+
+// const myPromise = new Promise((resvloe, reject) => {
+//   setTimeout(() => {
+//     resvloe("I am Good Promise ");
+//   }, 3000);
+// });
+
+// async function readData() {
+//   console.log("Before Promise");
+//   try {
+//     console.log(await myPromise);
+//   } catch (reason) {
+//     console.log(`Reason : +  ${reason}`);
+//   } finally {
+//     console.log("After Promise");
+//   }
+// }
+
+// readData();
+
+
+// ================
+
+// async function fetchData() {
+//   console.log("Before Fetch");
+//   try {
+    
+//     let myData = await fetch("https://api.github.com/users/elzerowebschool/repos");
+//     console.log(await myData.json() )
+//     // console.log(await myPromise);
+//   } catch (reason) {
+//     console.log(`Reason : +  ${reason}`);
+//   } finally {
+//     console.log("After Fetch");
+//   }
+// }
+
+// fetchData();
+// [==========================={EPsode[188]}=================]
+// The End 
+// --Others Information => Practice + Tutorials 
+// --Problem Solving 
+// --Search In Lesson 
+// -- Advanced Books
