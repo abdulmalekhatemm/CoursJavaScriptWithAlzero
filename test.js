@@ -3487,3 +3487,252 @@ SubString : substring(Start [Required],End [Optional])
 // console.log(`The Yaers   : ${years}`);//Number Of Minutes
 
 
+// [==========================={EPsode[160]}=================]
+// [Data And Time
+// ---getTime() =>Number Of MilliSeconds
+// ---getDate()  => Day Of The Month
+// ---getFullYear()
+// ---getMonth()=>  Zero Based
+// ---getDay() => Day Of The Week
+// ---getHours()
+// ---getMinutes()
+// ---getSeconds() ]
+
+// let dateNow =  new Date();
+// let birthday = new Date("oct 20, 82");
+// let dateDiff = dateNow - birthday;
+
+// console.log(dateDiff);
+
+// console.log(dateDiff / 1000 / 60 / 60 / 24 / 365);
+
+// console.log(dateNow);
+
+// console.log(dateNow.getTime( ));
+// console.log(dateNow.getDate( ));
+// console.log(dateNow.getFullYear( ));
+// console.log(dateNow.getMonth( ));
+// console.log(dateNow.getDay( ));
+// console.log(dateNow.getHours( ));
+// console.log(dateNow.getMinutes( ));
+// console.log(dateNow.getSeconds( ));
+
+// [==========================={EPsode[161]}=================]
+// [Date And Date
+// ---setTime(Milliseconds)
+// ---setDate()=> Day of The Month [Negative And Positive
+// ---setFullYear(year,month => Optional [0-11],day => Optional [1-31)
+// ---setMonth(Month [0-11) , Day => Optional [1-31] [Negative And Positive]
+// ---setHours(Hours [0-23],Minutes => Optional [0-59] , Ms => Optional [0-999])
+// ---setMinutes(Minutes [0-59] ,MS  => Optional  [0-999])
+// ---setSeconds(Seconds => [0-59], MS =>Optional [0-999] ]
+
+// let dateNow = new Date();
+// console.log(dateNow);
+
+// console.log("#".repeat(50));
+
+// dateNow.setTime(0);
+// console.log(dateNow);
+
+// console.log("#".repeat(66));
+
+// dateNow.setTime(1000);
+// console.log(dateNow);
+
+// console.log("#".repeat(66));
+
+// dateNow.setDate(35);
+// console.log(dateNow);
+
+// dateNow.setDate(2020 ,13);
+// console.log(dateNow);
+
+// dateNow.setMonth(15);
+// console.log(dateNow);
+// [==========================={EPsode[162]}=================]
+// Formatting Date And Time
+// --new Date(timestamp)
+// --new Date(Date String)
+// --new Date(Numeric Values )
+// ---Format
+// --"Oct 25 1982"
+// --"10/25/1982"
+// --"1982-10-25" =>ISO International Standard
+// --"1982 10"
+// --"1982"
+// --"82"
+// --1982,9,25,2,10,0
+// --1983,9,25
+// --"1982-10-25T06:10:00Z
+// Date.parse("String") //Read Date Form A String
+// console.log(Date.parse("Oct 25 1982"));
+
+// let date1 = new Date(0);
+// console.log(date1);
+
+// let date2 = new Date(404341200000);
+// console.log(date2);
+
+// let date3 = new Date("10/25/1982");
+// console.log(date3);
+
+// let date5 = new Date("1982-10-25");
+// console.log(date5);
+
+// let date6 = new Date("1982-10" );
+// console.log(date6);
+
+// let date7 = new Date("82");
+// console.log(date7);
+
+// let date8 = new Date(1982,9,25,2,10,0);
+// console.log(date8);
+
+// let date9 = new Date("1982-10-25T06:10:00Z");
+// console.log(date9);
+
+// [==========================={EPsode[163]}=================]
+
+// [Date And Time
+// ---Track Operations Time
+
+// --Search
+// ---Performance.now()
+// ---Performance.mark()]
+
+// Start Time
+// let start = new Date();
+
+// // Operation
+// for(let i = 0; i< 100000;i++){
+//    let div = document.createElement(`<div>`);
+//     div.appendChild(document.createTextNode(i));
+//     document.body.appendChild(div);
+// }
+
+// //Time End
+// let end  = new Date();
+
+// // Operation Duration
+// let duration = end - start ;
+
+// console.log(duration);
+// [==========================={EPsode[164]}=================]
+// [Generators
+// --Generator Function Run Its Code When Required.
+// --Generator Function Return Spacial Object [Generator Object]
+// --Generators Are Iterable ]
+
+// function* generateNumbers() {
+//     yield 1;
+//     console.log("Hello After Yield 1");
+//     yield 2;
+//     yield 3;
+//     yield 4;
+//     yield 5;
+// };
+
+// let generetor = generateNumbers();
+
+// console.log(typeof generetor);
+// console.log(generetor);
+
+// console.log(generetor.next());
+// console.log(generetor.next());
+// console.log(generetor.next());
+// console.log(generetor.next());
+// console.log(generetor.next());
+// console.log(generetor.next());
+
+// for(let value of generateNumbers()){
+//     console.log(value);
+// }
+
+// for(let value of generetor){
+//     console.log(value);
+// }
+
+// function* test(){
+//   yield 1;
+//   return 10;
+// }
+
+// let g = test();
+
+// console.log(g.next());
+// console.log(g.next());
+
+// [==========================={EPsode[165]}=================]
+// Generators
+// ---Delegate Generator
+
+// function* generateNums() {
+//     yield 1;
+//     yield 2;
+//     yield 3;
+// };
+
+// function* generateLetters (){
+//     yield "A";
+//       yield "B";
+//         yield "C";
+// }
+
+// function* generateAll(){
+//     yield* generateNums();
+//     yield* generateLetters();
+//     yield* [4,5,6];
+// };
+
+// let generator = generateAll();
+
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+
+// [==========================={EPsode[166]}=================]
+// Generators
+// --Generate Infinite Numbers
+// --Use Return Inside Generators
+// function* generateNumbers(){
+//     // yield 1;
+//     // yield 2;
+//     // return "A";
+//     // yield 3;
+//     // yield 4;
+//     let index  = 0;
+
+//     while(true){
+//         yield index++;
+//     }
+// };
+
+// let generate = generateNumbers();
+
+// console.log(generate.next());
+// console.log(generate.next());
+// console.log(generate.next());
+// console.log(generate.next());
+
+// [==========================={EPsode[167-168]}=================]
+// Models (وحدة برمجة بنتفذ وظفية معينة )
+// --Import And Export ]
+
+//  let a = 10;
+//  let arr = [1, 2, 3];
+//  function saySomething() {
+//   return `Something in main.js File `;
+// }
+// export {a , arr , saySomething };
+
+// export default function sayHello() {
+//   return  `Hello say Hi`
+// }
+// [==========================={EPsode[169-170-171]}=================]
