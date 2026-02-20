@@ -3736,3 +3736,301 @@ SubString : substring(Start [Required],End [Optional])
 //   return  `Hello say Hi`
 // }
 // [==========================={EPsode[169-170-171]}=================]
+// [What is JSON ?
+// ---JavaScript Object Notation
+// ---Format For Sharing Data Between Server And Client
+// ---JSON Derived Form JavaScript
+// ---Alternative To XML
+// ---File Extension Is .json
+// Why JSON ?
+// ---Easy To Use And Read
+// ---Used By Most Programing Language And Its Frameworks
+// --You Can Convert JSON Object To JS Object And Vice  Versa
+
+// JSON vs XML
+// ===================================================
+// ==Text Based Format        = Markup Language
+// ==Lightweight              = Heavier
+// ==Does Not Use Tages       = Using Tags
+// ==Shorter                  = Not Short
+// ==Can Use Arrays           = Canot Use Arrays
+// ==Not Support Comments     = Support Comments
+// ===================================================
+// ]
+
+// [==========================={EPsode[172]}=================]
+
+// [Parse And Stringify
+// --JSON.parse  => Convert Text Data To JS Object
+// --JSON.stringify => Convert JS Object TO JSON ]
+
+// const myJsonObjectFromServer = '{"Username":"Osama","Age":39}';
+// console.log(typeof  myJsonObjectFromServer);
+// console.log(myJsonObjectFromServer);
+
+// const myJsObject = JSON.parse(myJsonObjectFromServer);
+// console.log(typeof myJsObject);
+// console.log(myJsObject);
+
+// myJsObject["Username"] = "Elzero";
+// myJsObject["Age"]  = 40 ;
+
+// const myJsonObjectToServer =  JSON.stringify(myJsObject);
+// console.log(typeof  myJsonObjectToServer);
+// console.log( myJsonObjectToServer);
+
+// [==========================={EPsode[173]}=================]
+// [To Understand Ajax . Fetch ,Promises
+// Asynchronous vs Synchronous Programing
+// --Meaning
+// ------Synchronous (متزامن يتم تنفيذ العمليات بشكل متسلسل واحدة بعد واحدة )
+// --operations Runs in Sequence
+// --Each Operation Must Wait For The Previous One To Complete
+// --Story From Real Life
+// ------Asynchronous (متزامن غير  يمكن تنفذ عمليات اخري بين العملية يتم معالج العملية  )
+// --Operations Runs In Parallel
+// --This Means That An Operation Can Occur Another One Is Still Being Processed
+// --Story From Real Life
+
+// --Facebook As Example
+// --Simulation
+// ------Search
+// --JavaScript Is A Single-Threaded
+// --Multi Threaded Languages
+// ]
+
+// Synchronous
+// console.log("1");
+// console.log("2");
+// console.log("3");
+// window.alert(" Synchronous");
+// console.log("4");
+
+// Asynchronous
+
+// console.log("1");
+// console.log("2");
+// console.log("3");
+// window.setTimeout(()=> console.log(" Asynchronous") ,3000);
+// console.log("4");
+
+// [==========================={EPsode[174]}=================]
+// [To Understand Ajax, Fetch ,Promises
+// --Call Stack || Stack Trace
+// ----JavaScript Engine Use A Call Stack To Manange Execution Contexts
+// ----Mechanism To Make The Interpreter Track Your Calls
+// ----When Function Called It Added To The Stack
+// ----When Function Executed It Removed From Stack
+// ----After Function Is Finished Exceuting The Interpreter Containue From The Last Point
+// ----Work Using LIFO Principle =>Last In First Out
+// ----Call Stack Detect Web API Methods  And Level It To The Browser To Handle It
+
+// Web API
+// ----Methods Available From The Environment => Browser]
+
+// setTimeout(()=>{
+//   console.log("Wbe API ");
+// }
+// ,0);
+
+// function one() {
+//   console.log("One");
+// }
+// function two() {
+//   one();
+//   console.log("two");
+// }
+// function three() {
+//   two();
+//   console.log("three");
+// }
+
+// three();
+
+// [==========================={EPsode[175]}=================]
+// [To Understand Ajax, Fetch ,Promises
+// Event Loop + callback Queue
+// --Story
+// ---JavaScript Is A Single Threaded Language "All Operations Excuted in Single Thread"
+// ---Call Stack Track AllCalls
+// ---Every Function Is Done Its Poped Out
+// ---When You  Call Asynchrouous Function Its Sent To Browser API
+// ---Asynchrouous Function Like Settimeout Start Its Own Thread
+// ---Browser API Act As A Second Thread
+// ---API Finish Waiting And And Send Back The Function For Processing
+// ---Browser API Add The Callback  To CallBack Queue
+// ---Event Loop Wait For  Call Stack To Be  Empty
+// ---Event Loop Get callback From Callback Queue And It To CAll Stack
+// ---CallBack Queue Follow FIFO "First In First Out" Rule
+// ]
+// console.log("One");
+// window.setTimeout(()=>{
+// console.log("Three");
+// },0);
+// window.setTimeout(()=>{
+// console.log("Four");
+// },0);
+// console.log("Two");
+
+// setTimeout(()=>{
+//     console.log(myVar);
+// },0);
+// let myVar = 100;
+
+// myVar += 100;
+
+// [==========================={EPsode[176]}=================]
+// {[What Is AJAX And Networking Information
+// ===AJAX
+// ---Asynchronous JavaScript And XML
+// ---Approach TO Use Many Technologies [HTML, CSS,JS ,DOM]
+// ---It USe "XMLHtttpRequest" Object To Ineract With The Server
+// ---You  Can Fetch Data Or Send Data Without Page Refresh
+// ----Example
+// ---Youtube Studio
+// ---Google Driver
+// ---Upload Article
+// ---Form Check  Name
+// ---------
+// ---Test new XMLHtttpRequest();
+// ---Request And Response
+// ---Status  Code
+
+// ]
+
+// let req = new XMLHttpRequest();
+
+// console.log(req);
+// [==========================={EPsode[177-178]}=================]
+// [AJAX
+// ---Ready State => Status Of The REquest
+// [0] Request Not Initialized
+// [1] Server Connection Established
+// [2] Request Received
+// [3] Processing Request
+// [4] Request Is Finished And Response Is Ready
+// ----status
+// [200] Response Is Successful
+// [404] Not Found
+// ]
+
+// let req = new XMLHttpRequest();
+// req.open("GET", "https://api.github.com/users/elzerowebschool/repos");
+// req.send();
+// console.log(req);
+
+// req.onreadystatechange = function () {
+//     if ( this.readyState === 4 && this.status === 200 ){
+//         // console.log(this.responseText );
+//         let JsData = JSON.parse(this.responseText);
+
+//         // console.log(JsData);
+//         for (let i = 0 ; i < JsData.length;i++){
+//         let div = document.createElement("div");
+//         let reponame = document.createTextNode(JsData[i].name);
+
+//         div.appendChild(reponame);
+
+//         document.body.appendChild(div);
+//         }
+//     }
+// }
+// [==========================={EPsode[179]}=================]
+//  [To Understand Ajax , Fetch , Promises
+// ---Pyramid Of Doom || Callback Hell
+
+// ---What Is Callback
+// ---CallBack Hell Example
+
+// ---Waht Is Callback
+// ----A Function That Is Passed Into Another One As An Argument To Be Executed Later
+// ----Function To Handle Example
+// -----[1] Download Photo From URL
+// -----[2] Resize Photo
+// -----[3] Add Logo To The Photo
+// -----[4] Show The Photo In WebSite
+// ]
+
+// function makeItRed(e) {
+//   e.target.style.color = "red";
+// }
+
+// document.addEventListener("click", makeItRed);
+
+// // function iamCallBack() {
+// //   console.log("Iam A Callback Function ");
+// // }
+
+// // setTimeout(iamCallBack, 2000);
+
+// setTimeout(() => {
+//   console.log("Download Photo From URL");
+//   setTimeout(() => {
+//     console.log("Resize Photo ");
+//     setTimeout(() => {
+//       console.log("Add Logo To The Photo");
+//       setTimeout(() => {
+//         console.log("Show The Photo In WebSite");
+//       }, 1000);
+//     }, 1000);
+//   }, 1000);
+// }, 1000);
+// [==========================={EPsode[180]}=================]
+
+// [Promise Intro And Syntax
+// ---Promise In JavaScript Is LIke Promise In Real Life
+// ---Promise In JavaScript That Will Happen In The Future
+// ---Promise Avoid callback Hell
+// ---Promise Is The Object That Represent The Status Of An Asynchronous Operation And Resulting  Value
+// ----Promise Status
+// ----Pending: Intitial State
+// ----Fulfilled:Completed Successfully
+// ----Rejected:Failed
+// -----Story
+// ---Once A Promise Has Been Called,It Will Start In A Pending State
+// ---The Created Promise Will Eventually End In A Resolved  State Or Rejected State
+// ---Calling The Callback Function (Passed To Then And Catch )Upon Finishing.
+
+// ---Then
+// ---Take 2 Optional Agrument [callback For Success Or Failure]
+
+//  ]
+// const myPromise = new Promise((resolveFunction , rejectFunction )=>{
+//     let connect = true ;
+// if(connect){
+//     resolveFunction("Connection Established");
+// }else
+// {
+//     console.log(Error("Connection Faild"));
+// }
+// }).then(
+//     (resolValue) => console.log(`Good ${resolValue}`),
+//     (rejectValue) => console.log(`Bad ${rejectValue}`)
+// );
+
+// console.log(myPromise);
+
+// const myPromise = new Promise((resolveFunction, rejectFunction) => {
+//   let connect = true;
+//   if (connect) {
+//     resolveFunction("Connection Established");
+//   } else {
+//     console.log(Error("Connection Faild"));
+//   }
+// });
+
+// console.log(myPromise);
+
+// let resolver = (resolValue) => console.log(`Good ${resolValue}`);
+// let rejector = (rejectValue) => console.log(`Bad ${rejectValue}`);
+// myPromise.then(resolver, rejector);
+
+// myPromise.then(
+//     (resolValue) => console.log(`Good ${resolValue}`),
+//     (rejectValue) => console.log(`Bad ${rejectValue}`)
+// );
+
+// myPromise.then(
+//     (resolValue) => console.log(`Good ${resolValue}`),
+//     (rejectValue) => console.log(`Bad ${rejectValue}`)
+// );
